@@ -1,0 +1,84 @@
+
+
+/* Asegúrate de que el contenedor ocupe toda la pantalla */
+.container {
+  height: 100vh; /* Altura del contenedor: toda la altura de la ventana */
+  width: 100%;   /* Ancho del contenedor: todo el ancho de la ventana */
+  background-image: url("../../imagenes/landing2.png") ; /* URL de la imagen */
+  background-size: contain; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* La imagen no se repite */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* .button {
+  text-align: center;
+  width: 25%;
+  height: 50px;
+  font-family: 'Aloja';
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #e79645;
+  border-color: none;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+  border-radius: 50px;
+  transition: .5s;
+  color: white;
+  margin-top: 17%;
+  margin-bottom: 35%;
+  margin-left: 30%;
+}
+
+
+.button:hover {
+  background-color: rgba(29, 11, 121, 0.829);
+  color: white;
+  transform: scale(1.1);
+  } */
+
+  /*** ESTILOS BOTÓN SLIDE LEFT ***/
+.ov_btn_slide_left {
+  font-family: 'Aloja', cursive;
+  background: #ededed; /* color de fondo */
+  color: #e79645; /* color de fuente */
+  text-decoration: none;
+  border: 2px solid none; /* tamaño y color de borde */
+  padding: 16px 20px;
+  border-radius: 3px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 400%;
+padding:20px 20px 20px 20px;
+}
+.ov_btn_slide_left:hover {
+  color: #ededed; /* color de fuente hover */
+}
+.ov_btn_slide_left::after {
+  content: "";
+  background: #e79645;/* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.ov_btn_slide_left:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+

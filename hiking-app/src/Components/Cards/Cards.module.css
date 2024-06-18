@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+
+  .pagination {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .pageButton {
+    background-color: #e79645;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  .pageButton:hover {
+    background-color: #485a68;
+    color: white;
+  }
+  
+  .active {
+    background-color: #C5C3BC;
+  }
+  
