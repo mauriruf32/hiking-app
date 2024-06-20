@@ -7,8 +7,7 @@ import iconUrl from "../../imagenes/iconmonstr-location-1-32.png"
 export const newicon = new Leaflet.Icon({
   iconUrl,
   iconAnchor: [5, 55],
-  popupAnchor: [10, -44],
-  iconSize: [25, 55]
+  iconSize: [25, 35]
 });
 const Mapa = ({ lat, lng, Sendero }) => {
   
