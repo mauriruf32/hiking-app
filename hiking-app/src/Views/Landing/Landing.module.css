@@ -53,7 +53,7 @@
   z-index: 1;
   overflow: hidden;
   display: inline-block;
-  margin-bottom: 400%;
+  margin-bottom: 350%; /* altura del boton */
 padding:20px 20px 20px 20px;
 }
 .ov_btn_slide_left:hover {
