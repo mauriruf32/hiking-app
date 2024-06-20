@@ -1,3 +1,4 @@
+// Cards.jsx
 import React, { useState } from "react";
 import Card from "../Card/Card";
 import style from "./Cards.module.css";
@@ -38,12 +39,10 @@ const Cards = ({ hikingPlaces }) => {
 
   return (
     <div>
-
-    <div className={style.container}>
-      {paginatedHikingPlaces.map((hikingPlace, index) => (
-        <Card key={index} hikingPlace={hikingPlace} />
-      ))}
-
+      <div className={style.container}>
+        {paginatedHikingPlaces.map((hikingPlace) => (
+          <Card key={hikingPlace.id} hikingPlace={hikingPlace} />
+        ))}
       </div>
       <div className={style.pagination}>
         {currentPage > 1 && (

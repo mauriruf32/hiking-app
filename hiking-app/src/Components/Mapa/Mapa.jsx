@@ -1,8 +1,7 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Mapa.css";
-import location from "../../imagenes/iconmonstr-location-1-32.png"
 
 const Mapa = ({ lat, lng, Sendero }) => {
   return (
@@ -16,12 +15,7 @@ const Mapa = ({ lat, lng, Sendero }) => {
           url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker  position={[lat, lng]} >
-
-          {/* <Popup>
-            {location}
-          </Popup> */}
-        </Marker>
+        <Marker  position={[lat, lng]} />
       </MapContainer>
     </div>
   );

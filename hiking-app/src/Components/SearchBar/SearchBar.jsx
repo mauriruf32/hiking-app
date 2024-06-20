@@ -1,21 +1,24 @@
-import { getCountryByName } from "../../redux/actions";
-import { useDispatch, useSelector } from "react-redux";
-import { countries } from "../../utils/dummyData";
-
+// SearchBar.jsx
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getHikingPlaceByName } from "../../redux/actions";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
-  const countries = useSelector((state) => state.countries);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    dispatch(getCountryByName(e.target.value));
+  const handleInputChange = (e) => {
+    setSearchTerm(e.target.value);
+    dispatch(getHikingPlaceByName(e.target.value));
   };
 
   return (
-    <div >
-      <input type="search" onChange={handleChange} placeholder="Search.." />
-    </div>
+    <input
+      type="text"
+      placeholder="Buscar sendero"
+      value={searchTerm}
+      onChange={handleInputChange}
+    />
   );
 };
 
