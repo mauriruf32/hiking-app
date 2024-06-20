@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getHikingPlaceByName, getHikingPlaceByContinente, getHikingPlaceByPais } from "../../redux/actions";
+import style from "./SearchBar.module.css"
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -15,12 +16,15 @@ const SearchBar = () => {
   };
 
   return (
+    <div className={style.searchBar}>
     <input
       type="text"
-      placeholder="Buscar sendero"
+      placeholder="Puedes buscar por el nombre del Sendero"
       value={searchTerm}
       onChange={handleInputChange}
     />
+    </div>
+
   );
 };
 

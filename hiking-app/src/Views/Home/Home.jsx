@@ -4,6 +4,7 @@ import style from "./Home.module.css";
 import NavBar from '../../Components/NavBar/NavBar';
 import Cards from '../../Components/Cards/Cards';
 import { getHikingPlaces } from '../../redux/actions';
+import SearchBar from '../../Components/SearchBar/SearchBar';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -14,10 +15,18 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className={style.containerMain}>
+    <div>
       <NavBar />
+      <SearchBar/>
+
+    <div className={style.containerMain}>
+      <div>
       <Cards hikingPlaces={hikingPlaces} />
+
+      </div>
     </div>
+    </div>
+
   );
 }
 
