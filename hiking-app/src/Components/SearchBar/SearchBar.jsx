@@ -10,8 +10,8 @@ const SearchBar = () => {
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
     dispatch(getHikingPlaceByName(e.target.value));
-    dispatch(getHikingPlaceByContinente(e.target.value));
-    dispatch(getHikingPlaceByPais(e.target.value));
+    // dispatch(getHikingPlaceByContinente(e.target.value));
+    // dispatch(getHikingPlaceByPais(e.target.value));
   };
 
   return (
