@@ -1,7 +1,7 @@
 // SearchBar.jsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getHikingPlaceByName, getHikingPlaceByContinente } from "../../redux/actions";
+import { getHikingPlaceByName, getHikingPlaceByContinente, getHikingPlaceByPais } from "../../redux/actions";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ const SearchBar = () => {
     setSearchTerm(e.target.value);
     dispatch(getHikingPlaceByName(e.target.value));
     dispatch(getHikingPlaceByContinente(e.target.value));
+    dispatch(getHikingPlaceByPais(e.target.value));
   };
 
   return (
