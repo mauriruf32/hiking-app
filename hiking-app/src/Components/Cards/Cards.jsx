@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 import style from "./Cards.module.css";
 
 const Cards = ({ hikingPlaces }) => {
-  const cardsPerPage = 10;
+  const cardsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * cardsPerPage;

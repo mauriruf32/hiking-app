@@ -3,6 +3,7 @@ import { hikingPlaces } from "../utils/hikingData.js";
 
 export const GET_HIKINGPLACE_BY_NAME = "GET_HIKINGPLACE_BY_NAME";
 export const GET_HIKINGPLACES = "GET_HIKINGPLACES";
+export const GET_HIKINGPLACE_BY_CONTINENTE = "GET_HIKINGPLACE_BY_CONTINENTE";
 
 export function getHikingPlaces() {
   return function (dispatch) {
@@ -21,6 +22,19 @@ export function getHikingPlaceByName(searchTerm) {
 
     dispatch({
       type: GET_HIKINGPLACE_BY_NAME,
+      payload: filteredHikingPlaces
+    });
+  };
+}
+
+export function getHikingPlaceByContinente(searchTerm) {
+  return function (dispatch) {
+    const filteredHikingPlaces = hikingPlaces.filter(place =>
+      place.Continente.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    dispatch({
+      type: GET_HIKINGPLACE_BY_CONTINENTE,
       payload: filteredHikingPlaces
     });
   };
