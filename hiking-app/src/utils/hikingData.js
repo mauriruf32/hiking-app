@@ -3,6 +3,7 @@ import TourduMontBlanc from "../imagenes/03. Tour du Mont Blanc.jpg"
 export const hikingPlaces = [
   {
     País: "España",
+    Flag:"https://flagcdn.com/w320/es.png",
     Imagen: "https://www.cuatrocantones.com/wp-content/uploads/rutas-hacia-santiago.jpg",
     Sendero: "Camino de Santiago",
     lat: "42.878213",
@@ -14,6 +15,7 @@ export const hikingPlaces = [
   },
   {
     País: "España",
+    Flag:"https://flagcdn.com/w320/es.png",
     Imagen: "https://www.escapadarural.com/blog/wp-content/uploads/ruta-del-cares-scaled.jpg",
     Sendero: "Picos de Europa",
     lat: "43.187687",
@@ -25,6 +27,7 @@ export const hikingPlaces = [
   },
   {
     País: "Francia",
+    Flag:"https://flagcdn.com/w320/es.png",
     Sendero: "TourduMontBlanc",
     Imagen: TourduMontBlanc,
     lat: "45.832622",
@@ -36,6 +39,8 @@ export const hikingPlaces = [
   },
   {
     País: "Francia",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ba6a874c89460a9d8ba7f127aec43277/detailed",
     Sendero: "GR20",
     lat: "42.181095",
@@ -47,6 +52,8 @@ export const hikingPlaces = [
   },
   {
     País: "Italia",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668292/eGdvZmVjeXZibGpnaGNqZGNxenc=/drilldown",
     Sendero: "Cinque Terre",
     lat: "44.127660",
@@ -58,6 +65,8 @@ export const hikingPlaces = [
   },
   {
     País: "Italia",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/fd65c1cb90ef02f420374fa8a52d3235/detailed",
     Sendero: "Dolomitas",
     lat: "46.433411",
@@ -69,6 +78,8 @@ export const hikingPlaces = [
   },
   {
     País: "Suiza",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/776c92eb97b65b98c4161dcea907a640/detailed",
     Sendero: "Ruta de los Lagos (Lauterbrunnen)",
     lat: "46.593553",
@@ -80,6 +91,8 @@ export const hikingPlaces = [
   },
   {
     País: "Suiza",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/99feb2cb0246fa0b9131fd6a8adeedce/detailed",
     Sendero: "Haute Route",
     lat: "46.084427",
@@ -91,6 +104,8 @@ export const hikingPlaces = [
   },
   {
     País: "Reino Unido",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ee32e898708602db0f853f1d3499a3a4/detailed",
 
     Sendero: "West Highland Way",
@@ -103,6 +118,8 @@ export const hikingPlaces = [
   },
   {
     País: "Reino Unido",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7f5b68dcde2f74cbbfd72fa0cb23fc9e/detailed",
     Sendero: "Coast to Coast Walk",
     lat: "54.459993",
@@ -114,6 +131,8 @@ export const hikingPlaces = [
   },
   {
     País: "Estados Unidos",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/305e02940377726b7fa781e2ffc2805a/detailed",
     Sendero: "Appalachian Trail",
     lat: "40.485162",
@@ -125,6 +144,8 @@ export const hikingPlaces = [
   },
   {
     País: "Estados Unidos",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/8677568fbbba948d153bf630f8737307/detailed",
 
     Sendero: "Pacific Crest Trail",
@@ -137,6 +158,8 @@ export const hikingPlaces = [
   },
   {
     País: "Estados Unidos",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"",
     Sendero: "John Muir Trail",
     lat: "37.742558",
@@ -148,6 +171,8 @@ export const hikingPlaces = [
   },
   {
     País: "Canadá",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/3c866abb690a375834e9de909a9d93ba/detailed",
     Sendero: "West Coast Trail",
     lat: "48.628537",
@@ -159,6 +184,7 @@ export const hikingPlaces = [
   },
   {
     País: "Canadá",
+    Flag:"https://flagcdn.com/w320/us.png",
     Sendero: "Bruce Trail",
     lat: "43.711606",
     lng: "-79.626708",
@@ -169,6 +195,7 @@ export const hikingPlaces = [
   },
   {
     País: "Perú",
+    Flag:"https://flagcdn.com/w320/us.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/310239b6b7f7ac282a217769c0fe950d/detailed",
     Sendero: "Camino Inca",
     lat: "-13.263563",
@@ -180,6 +207,7 @@ export const hikingPlaces = [
   },
   {
     País: "Perú",
+    Flag:"https://flagcdn.com/w320/us.png",
     Sendero: "Salkantay Trek",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7f83170c4e752407431719eb5ceaea21/detailed",
     lat: "-13.323987",
@@ -191,6 +219,8 @@ export const hikingPlaces = [
   },
   {
     País: "Argentina",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Fitz Roy",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/85fc796736fcd1fa14376857d6b3add2/detailed",
     lat: "-49.276754",
@@ -202,6 +232,8 @@ export const hikingPlaces = [
   },
   {
     País: "Argentina",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Huella Andina",
     lat: "-40.777555",
     lng: "-71.646390",
@@ -212,6 +244,8 @@ export const hikingPlaces = [
   },
   {
     País: "Chile",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Torres del Paine",
     lat: "-51.220574",
     lng: "-72.996741",
@@ -222,6 +256,8 @@ export const hikingPlaces = [
   },
   {
     País: "Chile",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/c52d9059939a1cd4d2348b4d0145bbdb/detailed",
     Sendero: "Dientes de Navarino",
     lat: "-55.010680",
@@ -233,6 +269,8 @@ export const hikingPlaces = [
   },
   {
     País: "Nepal",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/cb7bab6fc7d0849de3d2866a80403c45/detailed",
     Sendero: "Everest Base Camp Trek",
     lat: "27.982759",
@@ -244,6 +282,8 @@ export const hikingPlaces = [
   },
   {
     País: "Nepal",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/fb6659384d83d829701fb6cf1d7dafeb/detailed",
     Sendero: "Annapurna Circuit",
     lat: "28.759697",
@@ -255,6 +295,8 @@ export const hikingPlaces = [
   },
   {
     País: "Japón",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/bf0a8a4a67554116e4756f9202e02a9b/detailed",
     Sendero: "Kumano Kodo",
     lat: "33.866641",
@@ -267,6 +309,8 @@ export const hikingPlaces = [
 
   {
     País: "Japón",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ee4fff40717723cbddb6289a71cc56cb/detailed",
     Sendero: "Nakasendo Trail",
     lat: "35.2288", // Añadido
@@ -278,6 +322,8 @@ export const hikingPlaces = [
   },
   {
     País: "India",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/b79854724e596559125a485dbdc38438/detailed",
     Sendero: "Valley of Flowers",
     lat: "30.7280", // Añadido
@@ -289,6 +335,8 @@ export const hikingPlaces = [
   },
   {
     País: "India",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/92bcb33fbc21ea019f3e7568616b808b/detailed",
     Sendero: "Markha Valley Trek",
     lat: "34.0360", // Añadido
@@ -300,6 +348,8 @@ export const hikingPlaces = [
   },
   {
     País: "Tanzania",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/061cf44bd3bc8c6072f30fa852f3dc1e/detailed",
     Sendero: "Monte Kilimanjaro (Ruta Marangu)",
     lat: "-3.0758", // Añadido
@@ -311,6 +361,8 @@ export const hikingPlaces = [
   },
   {
     País: "Tanzania",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/cabd3155db2492d02d13eae4eef69395/detailed",
     Sendero: "Monte Meru",
     lat: "-3.2500", // Añadido
@@ -322,6 +374,8 @@ export const hikingPlaces = [
   },
   {
     País: "Sudáfrica",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/425a6764342b26ef20309546acc0e032/detailed",
     Sendero: "Drakensberg Traverse",
     lat: "-29.4454", // Añadido
@@ -333,6 +387,8 @@ export const hikingPlaces = [
   },
   {
     País: "Sudáfrica",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"",
     Sendero: "Otter Trail",
     lat: "-34.0130", // Añadido
@@ -344,6 +400,8 @@ export const hikingPlaces = [
   },
   {
     País: "Marruecos",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7c5afd7f6acae7d58527d577499a8515/detailed",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
     Sendero: "Toubkal Circuit",
     lat: "31.0672", // Añadido
@@ -355,6 +413,8 @@ export const hikingPlaces = [
   },
   {
     País: "Marruecos",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668322/amJsdWhwdnJsOW5qc25obWg5N3M=/drilldown",
     Sendero: "Valle de Ourika",
     lat: "31.2644", // Añadido
     lng: "-7.6844", // Añadido
@@ -365,6 +425,8 @@ export const hikingPlaces = [
   },
   {
     País: "Australia",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668322/dXltMmx2dTN2Nmt4bnI1N214YjM=/drilldown",
     Sendero: "Overland Track",
     lat: "-41.7298", // Añadido
     lng: "145.9432", // Añadido
@@ -375,6 +437,8 @@ export const hikingPlaces = [
   },
   {
     País: "Australia",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/ZXFmZjZvcnRobWFzY3J3ZnFta3E=/drilldown",
     Sendero: "Larapinta Trail",
     lat: "-23.7000", // Añadido
     lng: "133.4333", // Añadido
@@ -385,6 +449,8 @@ export const hikingPlaces = [
   },
   {
     País: "Nueva Zelanda",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/ZnR5dWx3bHJmenF0bGUzZzR2eDU=/drilldown",
     Sendero: "Milford Track",
     lat: "-44.8078", // Añadido
     lng: "167.8755", // Añadido
@@ -395,6 +461,8 @@ export const hikingPlaces = [
   },
   {
     País: "Nueva Zelanda",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/czM0bndkc3BmYnh5ZWJmdHIyeGE=/drilldown",
     Sendero: "Tongariro Alpine Crossing",
     lat: "-39.1328", // Añadido
     lng: "175.6421", // Añadido
@@ -405,6 +473,8 @@ export const hikingPlaces = [
   },
   {
     País: "Nueva Zelanda",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/bGV2bjZiYnJpaGVqYmQ1d2x4dGc=/drilldown",
     Sendero: "Routeburn Track",
     lat: "-44.6883", // Añadido
     lng: "168.1617", // Añadido
@@ -415,6 +485,8 @@ export const hikingPlaces = [
   },
   {
     País: "México",
+    Flag:"https://flagcdn.com/w320/es.png",
+    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/aTZpOHY3anR0ejk0bzBiMGFwaDQ=/drilldown",
     Sendero: "Pico de Orizaba",
     lat: "19.0296", // Añadido
     lng: "-97.2690", // Añadido
@@ -425,6 +497,8 @@ export const hikingPlaces = [
   },
   {
     País: "México",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Nevado de Toluca",
     lat: "19.1091", // Añadidoº
     lng: "-99.7591", // Añadido
@@ -435,6 +509,8 @@ export const hikingPlaces = [
   },
   {
     País: "Costa Rica",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Cerro Chirripó",
     lat: "9.4814", // Añadido
     lng: "-83.4844", // Añadido
@@ -445,6 +521,8 @@ export const hikingPlaces = [
   },
   {
     País: "Costa Rica",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Parque Nacional Corcovado",
     lat: "8.4667", // Añadido
     lng: "-83.5833", // Añadido
@@ -455,6 +533,8 @@ export const hikingPlaces = [
   },
   {
     País: "Guatemala",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Volcán Acatenango",
     lat: "14.5000", // Añadido
     lng: "-90.8764", // Añadido
@@ -465,6 +545,8 @@ export const hikingPlaces = [
   },
   {
     País: "Guatemala",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "El Mirador",
     lat: "17.7500", // Añadido
     lng: "-89.9167", // Añadido
@@ -475,6 +557,8 @@ export const hikingPlaces = [
   },
   {
     País: "Ecuador",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Quilotoa Loop",
     lat: "-0.8771", // Añadido
     lng: "-78.9014", // Añadido
@@ -485,6 +569,8 @@ export const hikingPlaces = [
   },
   {
     País: "Ecuador",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Cotopaxi",
     lat: "-0.6800", // Añadido
     lng: "-78.4372", // Añadido
@@ -495,6 +581,8 @@ export const hikingPlaces = [
   },
   {
     País: "Colombia",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Ciudad Perdida",
     lat: "11.0400", // Añadido
     lng: "-73.9100", // Añadido
@@ -505,6 +593,8 @@ export const hikingPlaces = [
   },
   {
     País: "Colombia",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Cocora Valley",
     lat: "4.6371", // Añadido
     lng: "-75.5024", // Añadido
@@ -515,6 +605,8 @@ export const hikingPlaces = [
   },
   {
     País: "Noruega",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Trolltunga",
     lat: "60.1210", // Añadido
     lng: "6.7491", // Añadido
@@ -525,6 +617,8 @@ export const hikingPlaces = [
   },
   {
     País: "Noruega",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Preikestolen",
     lat: "58.9865", // Añadido
     lng: "6.1552", // Añadido
@@ -535,6 +629,8 @@ export const hikingPlaces = [
   },
   {
     País: "Suecia",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Kungsleden",
     lat: "67.9012", // Añadido
     lng: "18.5488", // Añadido
@@ -545,6 +641,8 @@ export const hikingPlaces = [
   },
   {
     País: "Austria",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Eagle Walk",
     lat: "47.2528", // Añadido
     lng: "11.4004", // Añadido
@@ -555,6 +653,8 @@ export const hikingPlaces = [
   },
   {
     País: "Austria",
+    Flag:"https://flagcdn.com/w320/es.png",
+
     Sendero: "Alpe Adria Trail",
     lat: "46.6200", // Añadido
     lng: "13.8472", // Añadido

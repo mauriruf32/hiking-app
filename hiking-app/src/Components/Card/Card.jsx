@@ -5,7 +5,7 @@ import { useState } from "react";
 import Mapa from "../Mapa/Mapa";
 
 const Card = ({ hikingPlace }) => {
-  const { Sendero, Imagen, lat, lng, País, Dificultad, Región, Continente } = hikingPlace;
+  const { Sendero, Imagen, Flag, lat, lng, País, Dificultad, Región, Continente } = hikingPlace;
 
   const [isHidden, setIsHidden] = useState(false);
 
@@ -24,7 +24,7 @@ const Card = ({ hikingPlace }) => {
           <img src={Imagen} alt="imagen" style={{ width: "300px", height: "300px" }} />
           <div className={style.informacion}>
             <p className={style.name}>{Sendero}</p>
-            <p className={style.details}>País: {País}</p>
+            <p className={style.details}>País: {País} <img src={Flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
             <p className={style.details}>Dificultad: {Dificultad}</p>
             <p className={style.details}>Región: {Región}</p>
             <p className={style.details}>Continente: {Continente}</p>
