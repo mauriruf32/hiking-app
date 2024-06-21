@@ -3,7 +3,7 @@ import Leaflet from "leaflet";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "./Mapa.css";
 import 'leaflet/dist/leaflet.css';
-import iconUrl from "../../imagenes/iconmonstr-location-1-32.png"
+import iconUrl from "../../imagenes/icons8-trekking-50.png"
 export const newicon = new Leaflet.Icon({
   iconUrl,
   iconAnchor: [5, 55],
