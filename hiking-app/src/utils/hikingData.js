@@ -133,16 +133,15 @@ export const hikingPlaces = [
     Continente: "América del Norte"
   },
   {
-    País: "Estados Unidos",
-    Flag:"https://flagcdn.com/w320/us.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/8677568fbbba948d153bf630f8737307/detailed",
-    Sendero: "Pacific Crest Trail",
-    lat: "45.634989",
-    lng: "-121.315292",
-    Descripción: "Ruta de más de 4,200 km que va desde México hasta Canadá por la costa oeste",
-    Dificultad: "Muy Difícil",
-    Región: "Costa Oeste",
-    Continente: "América del Norte"
+    "country": "Estados Unidos",
+    "flag":"https://flagcdn.com/w320/us.png",
+    "image":"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/8677568fbbba948d153bf630f8737307/detailed",
+    "name": "Pacific Crest Trail",
+    "lat": "45.634989",
+    "lng": "-121.315292",
+    "duration": "Ruta de más de 4,200 km que va desde México hasta Canadá por la costa oeste",
+    "difficulty": "Muy Dificil",
+    "continent": "América del Norte"
   },
   {
     País: "Estados Unidos",
