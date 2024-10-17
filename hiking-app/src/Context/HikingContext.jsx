@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { createHikingRequest } from "../api/hikings";
+import { createHikingRequest, getHikingsRequest } from "../api/hikings";
 
 const HikingContext = createContext();
 
@@ -15,6 +15,16 @@ export const useHikings = () => {
 export function HikingProvider({ children }) {
     const [ hinkings, setHikings ] = useState([]);
 
+    const getHikingPlaces = async () => {
+        try {
+            const res = await getHikingsRequest();
+            setHikings(res.data);
+        } catch (error) {
+            console.error(error);
+        }
+       
+    }
+
     const createHiking = async (hiking) => {
         const res = await createHikingRequest(hiking)
         console.log(res);
@@ -25,6 +35,7 @@ export function HikingProvider({ children }) {
         value={{
             hinkings,
             createHiking,
+            getHikingPlaces,
         }}
         >
             {children}

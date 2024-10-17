@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const usersRouter = require("./usersRouter");
-// const hikingRouter = require("./hikingRouter");
+const hikingRouter = require("./hikingRouter");
 const favsRouter = require("./favRouter");
 // const loginRouter = require("../controllers/auth.controller.js");
 // const profileRouter = require("./profileRouter")

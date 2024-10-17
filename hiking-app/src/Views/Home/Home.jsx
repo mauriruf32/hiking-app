@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import style from "./Home.module.css";
-import Cards from '../../Components/Cards/Cards';
-import { getHikingPlaces } from '../../redux/actions';
+import Card from '../../Components/Card/Card';
+import { useHikings } from '../../Context/HikingContext';
 import SearchBar from '../../Components/SearchBar/SearchBar';
-// import { userData } from '../../helpers';
 
 const Home = () => {
-  const dispatch = useDispatch();
-  const hikingPlaces = useSelector(state => state.hikingPlaces);
+  const { getHikingPlaces, hinkings } = useHikings();
+console.log(hinkings)
+
   useEffect(() => {
-    dispatch(getHikingPlaces());
-  }, [dispatch]);
+    getHikingPlaces();
+  }, []);
+
 
   return (
     <div>
@@ -19,13 +19,18 @@ const Home = () => {
       </div>
       <SearchBar/>
 
-    <div className={style.containerMain}>
+      <div className={style.containerMain}>
       <div>
-      <Cards hikingPlaces={hikingPlaces} />
+        {hinkings?.map((hiking) => (
+            <Card hiking={hiking} key={hiking.id} />
+
+      ))}
 
       </div>
     </div>
-    </div>
+
+      </div>
+
 
   );
 }

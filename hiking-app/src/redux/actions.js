@@ -10,23 +10,23 @@ export const ADD_FAV = "ADD_FAV";
 export const LOGIN_USER = "LOGIN_USER";
 
 // const URL = process.env.URL || 'https://awa-gazebos.vercel.app';
-const URL = process.env.URL || 'http://localhost:3001';
+// const URL = process.env.URL || 'http://localhost:3001/api';
 
-export function getHikingPlaces() {
-  return async function(dispatch){
-    const response = await axios.get(`${URL}/hikingplaces`);
-     dispatch ({
-        type: "GET_HIKINGPLACES",
-        payload: response.data
-    });
-};
+// export function getHikingPlaces() {
+//   return async function(dispatch){
+//     const response = await axios.get(`${URL}/hikingplaces`);
+//      dispatch ({
+//         type: "GET_HIKINGPLACES",
+//         payload: response.data
+//     });
+// };
   // return function (dispatch) {
   //   dispatch({
   //     type: GET_HIKINGPLACES,
   //     payload: hikingPlaces,
   //   });
   // };
-}
+// }
 
 
 export function getHikingPlaceByName(searchTerm) {

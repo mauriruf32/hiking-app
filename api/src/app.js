@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const mainRouter = require("./routes/mainRouter");
+// const mainRouter = require("./routes/mainRouter");
 const authRoutes = require ("./routes/auth.routes.js");
 const hikingRoutes = require ("./routes/hiking.routes.js");
 const cors = require("cors");
@@ -37,7 +37,7 @@ app.use((req, res, next) => {
 })
 
 
-app.use(mainRouter);
+// app.use(mainRouter);
 
 
 

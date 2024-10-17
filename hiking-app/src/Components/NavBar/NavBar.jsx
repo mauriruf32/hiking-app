@@ -10,7 +10,7 @@ function NavBar() {
 
   return (
     <nav className={style.container}>
-      <Link to="/home">
+      <Link to="/">
       <h1>Hikings Manager</h1>
       </Link>
       <ul className={style.lista}>
@@ -18,6 +18,9 @@ function NavBar() {
         <>
         <li>
           Welcome User
+        </li>
+        <li>
+          <Link to="/home">Add Hiking Place</Link>
         </li>
         <li>
           <Link to="/hikingform">Add Hiking Place</Link>

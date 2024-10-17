@@ -1,7 +1,7 @@
 const { HikingPlace } = require("../db");
 
 const getHikingPlaces = async (req, res) => {
-    const hikingPlaces = await HikingPlace.find();
+    const hikingPlaces = await HikingPlace.findAll();
     res.json(hikingPlaces);
 };
 

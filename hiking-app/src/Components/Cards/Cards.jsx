@@ -3,16 +3,16 @@ import React, { useState } from "react";
 import Card from "../Card/Card";
 import style from "./Cards.module.css";
 
-const Cards = ({ hikingPlaces }) => {
+const Cards = ({ hinkings }) => {
   const cardsPerPage = 15;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
 
-  const paginatedHikingPlaces = hikingPlaces.slice(startIndex, endIndex);
+  const paginatedHikingPlaces = hinkings.slice(startIndex, endIndex);
 
-  const totalPages = Math.ceil(hikingPlaces.length / cardsPerPage);
+  const totalPages = Math.ceil(hinkings.length / cardsPerPage);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);

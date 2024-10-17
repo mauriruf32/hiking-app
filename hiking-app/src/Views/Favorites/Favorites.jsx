@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { connect, useDispatch } from "react-redux";
-import { getFav } from "../../redux/actions";
+import { useH } from "../../redux/actions";
 import Card from "../../Components/Card/Card";
 // import styles from "./Favorites.module.css"; // Verifica si realmente necesitas esto
 

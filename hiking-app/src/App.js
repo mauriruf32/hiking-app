@@ -31,6 +31,8 @@ function App() {
         <Route path="/logout" element={<LogOut  />} />
         <Route path="/profile" element={<Profile  />} />
         <Route path="/hikingform" element={<HikingForm  />} />
+        {/* <Route path="/home" element={<Home  />} /> */}
+
       </Route>
       </Routes>
     </HikingProvider>

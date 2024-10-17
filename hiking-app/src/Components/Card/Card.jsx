@@ -4,56 +4,28 @@ import style from "./Card.module.css";
 import Mapa from "../Mapa/Mapa";
 import { addFav } from "../../redux/actions";
 import React, { useState, useEffect } from "react";
+// import { useHikings } from '../../Context/HikingContext';
 
 
-const Card = ({ hikingPlace }) => {
-  const { name, image, flag, country, difficulty, continent, duration, lat, lng } = hikingPlace;
-
-  // const [isHidden, setIsHidden] = useState(false);
-  // const [isFav, setIsFav] = useState(false);
-
-
-  // const handleFavorite = () => {
-  //   if (isFav) {
-      
-    
-  //     addFav(hikingPlace);
-  //   }
-  //   setIsFav(!isFav);
-  // };
-
+const Card = ({hiking}) => {
+  // const { getHikingPlaces, hikings } = useHikings();
+// console.log(hikings)
 
   // useEffect(() => {
-  //   if (favoritePlaces) {
-  //     favoritePlaces.forEach((fav) => {
-  //       if (fav.Sendero === hikingPlace.Sendero) {
-  //         setIsFav(true);
-  //       }
-  //     });
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [favoritePlaces]);
-
-  // const onClose = () => {
-  //   setIsHidden(true);
-  // };
-
-  // if (isHidden) {
-  //   return null;
-  // }
-
+  //   getHikingPlaces();
+  // }, []);
 
   return (
     <div className={style.flip_card}>
       <div className={style.flip_card_inner}>
         <div className={style.flip_card_front}>
 
-          <img src={image} alt="imagen" style={{ width: "300px", height: "300px" }} />
+          <img src={hiking.image} alt="imagen" style={{ width: "300px", height: "300px" }} />
           <div className={style.informacion}>
-            <p className={style.name}>{name}</p>
-            <p className={style.details}>País: {country} <img src={flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
-            <p className={style.details}>Dificultad: {difficulty}</p>
-            <p className={style.details}>Continente: {continent}</p>
+            <p className={style.name}>{hiking.name}</p>
+            <p className={style.details}>País: {hiking.country} <img src={hiking.flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
+            <p className={style.details}>Dificultad: {hiking.continent}</p>
+            <p className={style.details}>Continente: </p>
           </div>
         </div>
         <div className={style.flip_card_back}>
@@ -62,7 +34,7 @@ const Card = ({ hikingPlace }) => {
       ) : (
         <button  onClick={handleFavorite}>🤍</button>
       )} */}
-          <Mapa lat={parseFloat(lat)} lng={parseFloat(lng)} />
+          <Mapa lat={parseFloat(hiking.lat)} lng={parseFloat(hiking.lng)} />
         </div>
       </div>
     </div>
