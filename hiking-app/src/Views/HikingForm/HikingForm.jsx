@@ -1,15 +1,18 @@
-import React from 'react';
-import styles from "./HikingForm.module.css"
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+
 import { useHikings } from '../../Context/HikingContext';
+import styles from "./HikingForm.module.css";
+
 
 function HikingForm() {
   const { register, handleSubmit, setError } = useForm(); 
-  const { hikings, createHiking } = useHikings();
-  console.log(hikings)
+  const { createHiking } = useHikings();
+  const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
     createHiking(data);
+    navigate('/home');
   });
 
   const validateNumber = (value) => {
@@ -61,13 +64,13 @@ function HikingForm() {
         </select>
         <input 
         className={styles.input} 
-          type='number' 
+          type='text' 
           placeholder='Latitude'
           {...register("lat", { required: true, validate: validateNumber  })}
         />
         <input 
         className={styles.input} 
-          type='number' 
+          type='text' 
           placeholder='Longitude'
           {...register("lng", { required: true, validate: validateNumber  })}
         />

@@ -20,7 +20,7 @@ console.log(hinkings)
       <SearchBar/>
 
       <div className={style.containerMain}>
-      <div>
+      <div className={style.cardscontainer}>
         {hinkings?.map((hiking) => (
             <Card hiking={hiking} key={hiking.id} />
 

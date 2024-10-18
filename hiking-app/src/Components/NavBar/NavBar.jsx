@@ -5,22 +5,22 @@ import { useAuth } from '../../Context/AuthContext';
 
 function NavBar() {
   
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout, user } = useAuth();
 
 
   return (
     <nav className={style.container}>
-      <Link to="/">
+      <Link to="/home">
       <h1>Hikings Manager</h1>
       </Link>
       <ul className={style.lista}>
       {isAuthenticated ? (
         <>
         <li>
-          Welcome User
+          Welcome User {user.firstName}
         </li>
         <li>
-          <Link to="/home">Add Hiking Place</Link>
+          <Link to="/profile">Profile</Link>
         </li>
         <li>
           <Link to="/hikingform">Add Hiking Place</Link>

@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { createHikingRequest, getHikingsRequest } from "../api/hikings";
+import { createHikingRequest, getHikingsRequest, deleteHikingsRequest } from "../api/hikings";
 
 const HikingContext = createContext();
 
@@ -26,8 +26,19 @@ export function HikingProvider({ children }) {
     }
 
     const createHiking = async (hiking) => {
-        const res = await createHikingRequest(hiking)
+        const res = await createHikingRequest(hiking);
         console.log(res);
+    }
+
+    const deleteHiking = async (id) => {
+        try {
+        const res = await deleteHikingsRequest(id);
+        if (res.status = 204) setHikings(hinkings.filter(hiking => hiking.id != id));
+            
+        } catch (error) {
+        console.log(error);
+            
+        }
     }
 
     return (
@@ -36,6 +47,7 @@ export function HikingProvider({ children }) {
             hinkings,
             createHiking,
             getHikingPlaces,
+            deleteHiking,
         }}
         >
             {children}

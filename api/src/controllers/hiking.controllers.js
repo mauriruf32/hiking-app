@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const { HikingPlace } = require("../db");
 
 const getHikingPlaces = async (req, res) => {
@@ -20,7 +21,8 @@ const getHikingPlace = async (req, res) => {
 };
 
 const deleteHikingPlace = async (req, res) => {
-    const hikingPlace = await HikingPlace.destroy(req.params.id);
+    const { id } = req.params;
+    const hikingPlace = await HikingPlace.destroy({where:{ id:id },});
     if (!hikingPlace) return res.status(404).json({message: "Hiking Place not found"})
     res.json(hikingPlace)
 };
