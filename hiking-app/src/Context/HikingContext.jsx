@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { createHikingRequest, getHikingsRequest, deleteHikingsRequest } from "../api/hikings";
+import { createHikingRequest, getHikingsRequest, deleteHikingsRequest, getHikingByNameRequest } from "../api/hikings";
 
 const HikingContext = createContext();
 
@@ -41,6 +41,20 @@ export function HikingProvider({ children }) {
         }
     }
 
+    const getHikingByName = async (name) => {
+        const res = await getHikingByNameRequest(name); // Suponiendo que esta función obtiene todos los datos
+        if (res.status = 200) setHikings(hinkings.filter(hiking => hiking.name.toLowerCase().includes(name.toLowerCase())));
+
+        // const filteredHikes = hinkings.filter(hiking => hiking.name.toLowerCase().includes(name.toLowerCase()));
+        // setHikings(res)
+    };
+    
+    // const getHikingByName = async (name) => {
+    //         const res = await getHikingByNameRequest(name);
+    //         console.log(res);
+
+    // }
+
     return (
         <HikingContext.Provider 
         value={{
@@ -48,6 +62,7 @@ export function HikingProvider({ children }) {
             createHiking,
             getHikingPlaces,
             deleteHiking,
+            getHikingByName,
         }}
         >
             {children}

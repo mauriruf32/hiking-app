@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../../Context/AuthContext';
+import { useNavigate } from "react-router-dom";
 import style from "./Form.module.css";
 
 const LogIn = () => {
   const { register, handleSubmit, formState: {errors}, } = useForm();
-  const { signIn, errors: signInErrors } = useAuth();
+  const { signIn, errors: signInErrors, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data)=> {
     signIn(data);
     console.log(data);
-  })
+  });
+
+  useEffect(() => {
+    if (isAuthenticated) navigate("/home");
+  }, [isAuthenticated]);
 
   return (
     <div className={style.form}>

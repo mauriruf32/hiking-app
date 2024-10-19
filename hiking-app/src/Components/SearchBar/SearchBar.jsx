@@ -1,18 +1,15 @@
 // SearchBar.jsx
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { getHikingPlaceByName, getHikingPlaceByContinente, getHikingPlaceByPais } from "../../redux/actions";
+import { useHikings} from "../../Context/HikingContext";
 import style from "./SearchBar.module.css"
 
 const SearchBar = () => {
-  const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
+  const { getHikingByName } = useHikings();
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
-    dispatch(getHikingPlaceByName(e.target.value));
-    dispatch(getHikingPlaceByContinente(e.target.value));
-    dispatch(getHikingPlaceByPais(e.target.value));
+    (getHikingByName(e.target.value));
   };
 
   return (

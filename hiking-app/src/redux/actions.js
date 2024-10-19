@@ -10,7 +10,7 @@ export const ADD_FAV = "ADD_FAV";
 export const LOGIN_USER = "LOGIN_USER";
 
 // const URL = process.env.URL || 'https://awa-gazebos.vercel.app';
-// const URL = process.env.URL || 'http://localhost:3001/api';
+const URL = process.env.URL || 'http://localhost:3001/api';
 
 // export function getHikingPlaces() {
 //   return async function(dispatch){
@@ -29,44 +29,57 @@ export const LOGIN_USER = "LOGIN_USER";
 // }
 
 
-export function getHikingPlaceByName(searchTerm) {
-  return function (dispatch) {
-    const filteredHikingPlaces = hikingPlaces.filter(place =>
-      place.Sendero.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+// export function getHikingPlaceByName(searchTerm) {
+//   return function (dispatch) {
+//     const filteredHikingPlaces = hikingPlaces.filter(place =>
+//       place.Sendero.toLowerCase().includes(searchTerm.toLowerCase())
+//     );
 
-    dispatch({
-      type: GET_HIKINGPLACE_BY_NAME,
-      payload: filteredHikingPlaces
-    });
-  };
-}
+//     dispatch({
+//       type: GET_HIKINGPLACE_BY_NAME,
+//       payload: filteredHikingPlaces
+//     });
+//   };
+// }
 
-export function getHikingPlaceByContinente(searchTerm) {
-  return function (dispatch) {
-    const filteredHikingPlaces = hikingPlaces.filter(place =>
-      place.Continente.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+// export function getHikingPlaceByName(searchTerm) {
+//     return async function (dispatch) {
+//         const response = await axios.get(`${URL}/hikingplaces/${searchTerm}`);
+//         dispatch({
+//             type: GET_HIKINGPLACE_BY_NAME,
+//             payload: response.data
+//         });
+//         return response.data; 
+//     };
+// }
 
-    dispatch({
-      type: GET_HIKINGPLACE_BY_CONTINENTE,
-      payload: filteredHikingPlaces
-    });
-  };
-}
 
-export function getHikingPlaceByPais(searchTerm) {
-  return function (dispatch) {
-    const filteredHikingPlaces = hikingPlaces.filter(place =>
-      place.País.toLowerCase().includes(searchTerm.toLowerCase())
-    );
 
-    dispatch({
-      type: GET_HIKINGPLACE_BY_PAIS,
-      payload: filteredHikingPlaces
-    });
-  };
-}
+// export function getHikingPlaceByContinente(searchTerm) {
+//   return function (dispatch) {
+//     const filteredHikingPlaces = hikingPlaces.filter(place =>
+//       place.Continente.toLowerCase().includes(searchTerm.toLowerCase())
+//     );
+
+//     dispatch({
+//       type: GET_HIKINGPLACE_BY_CONTINENTE,
+//       payload: filteredHikingPlaces
+//     });
+//   };
+// }
+
+// export function getHikingPlaceByPais(searchTerm) {
+//   return function (dispatch) {
+//     const filteredHikingPlaces = hikingPlaces.filter(place =>
+//       place.País.toLowerCase().includes(searchTerm.toLowerCase())
+//     );
+
+//     dispatch({
+//       type: GET_HIKINGPLACE_BY_PAIS,
+//       payload: filteredHikingPlaces
+//     });
+//   };
+// }
 
 export const addFav = (payload) => {
   return async (dispatch) => {
