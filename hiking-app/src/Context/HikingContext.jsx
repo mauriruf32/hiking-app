@@ -42,18 +42,11 @@ export function HikingProvider({ children }) {
     }
 
     const getHikingByName = async (name) => {
-        const res = await getHikingByNameRequest(name); // Suponiendo que esta función obtiene todos los datos
+        const res = await getHikingByNameRequest(name); 
         if (res.status = 200) setHikings(hinkings.filter(hiking => hiking.name.toLowerCase().includes(name.toLowerCase())));
-
-        // const filteredHikes = hinkings.filter(hiking => hiking.name.toLowerCase().includes(name.toLowerCase()));
-        // setHikings(res)
     };
     
-    // const getHikingByName = async (name) => {
-    //         const res = await getHikingByNameRequest(name);
-    //         console.log(res);
-
-    // }
+ 
 
     return (
         <HikingContext.Provider 

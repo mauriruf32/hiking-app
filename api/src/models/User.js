@@ -1,4 +1,7 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require('sequelize');
+// const {sequelize} = require("../db.js");
+
+// const { HikingPlace } = require("./HikingPlace.js");
 
 module.exports = (sequelize) => {
   sequelize.define(
@@ -46,3 +49,4 @@ module.exports = (sequelize) => {
     }
   );
 }
+

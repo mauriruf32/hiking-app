@@ -7,8 +7,8 @@ const getHikingPlaces = async (req, res) => {
 };
 
 const createHikingPlace = async (req, res) => {
-    const { name, image, duration, difficulty, country, flag, continent, lat, lng } = req.body;
-    const newHikingPlace = new HikingPlace({ name, image, duration, difficulty, country, flag, continent, lat, lng });
+    const { name, image, duration, difficulty, country, flag, continent, lat, lng, userId } = req.body;
+    const newHikingPlace = new HikingPlace({ name, image, duration, difficulty, country, flag, continent, lat, lng, userId });
     const savedHikingPlace = await newHikingPlace.save();
     res.json(savedHikingPlace);
 
