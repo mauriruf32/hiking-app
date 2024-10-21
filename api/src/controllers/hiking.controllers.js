@@ -1,5 +1,6 @@
 const { where } = require("sequelize");
 const { HikingPlace } = require("../db");
+const { User } = require("../db");
 
 const getHikingPlaces = async (req, res) => {
     const hikingPlaces = await HikingPlace.findAll();
@@ -34,6 +35,7 @@ const updateHikingPlace = async (req, res) => {
     if (!hikingPlace) return res.status(404).json({message: "Hiking Place not found"})
     res.json(hikingPlace)
 };
+
 
 module.exports = {
     getHikingPlaces,

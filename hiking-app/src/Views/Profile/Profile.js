@@ -18,6 +18,7 @@ const Profile = () => {
             <div className='profile-info'>
                 <p>Name: {user.firstName}</p>
                 <p>Email: {user.email}</p>
+                <p>Email: {user.id}</p>
             </div>
             <div className={style.cardscontainer}>
                 {hinkings?.map((hiking) => (

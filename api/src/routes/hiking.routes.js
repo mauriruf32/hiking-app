@@ -5,7 +5,7 @@ const {
     getHikingPlaces, 
     getHikingPlace, 
     updateHikingPlace, 
-    deleteHikingPlace 
+    deleteHikingPlace,
 } = require("../controllers/hiking.controllers.js");
 const { validateSchema } = require("../middlewares/validator.middleware.js");
 const  { createHikingPlaceSchema } = require( "../hiking.schema.js");

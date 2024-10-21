@@ -1,22 +1,23 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-
 import { useHikings } from '../../Context/HikingContext';
+import { useAuth } from '../../Context/AuthContext';
 import styles from "./HikingForm.module.css";
-
 
 function HikingForm() {
   const { register, handleSubmit, setError } = useForm(); 
   const { createHiking } = useHikings();
+  const { user } = useAuth(); // Obtener el usuario actual
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
-    createHiking(data);
+    // Añadir el userId al objeto de datos
+    const hikingData = { ...data, userId: user.id };
+    createHiking(hikingData);
     navigate('/home');
   });
 
   const validateNumber = (value) => {
-    // Expresión regular para validar números (incluyendo negativos y decimales)
     const regex = /^-?\d+([.,]\d+)?$/;
     if (!regex.test(value)) {
       setError("duration", {
@@ -75,25 +76,26 @@ function HikingForm() {
           {...register("lng", { required: true, validate: validateNumber  })}
         />
         <input 
-        className={styles.input} 
+          className={styles.input} 
           type='text' 
           placeholder='Country'
           {...register("country")}
           required
         />
         <input 
-        className={styles.input} 
+          className={styles.input} 
           type='text' 
           placeholder='Flag'
           {...register("flag")}
         />
         <input 
-        className={styles.input} 
+          className={styles.input} 
           type='text' 
           placeholder='Continent'
           {...register("continent")}
           required
         />
+        
         <button type='submit'>
           Save
         </button>

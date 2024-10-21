@@ -1,8 +1,10 @@
 import React from 'react';
 import style from "./Cards.module.css";
 import { useHikings } from '../../Context/HikingContext';
+import { useAuth } from '../../Context/AuthContext';
 
 const CardProfile = ({hiking}) => {
+  const { user } = useAuth();
 
   const { deleteHiking } = useHikings();
 
