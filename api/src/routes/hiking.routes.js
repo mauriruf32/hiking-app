@@ -14,7 +14,7 @@ const router = Router();
 
 router.get(`/hikingplaces`, getHikingPlaces);
 
-router.get("/hikingplaces/:id", authRequired, getHikingPlace);
+router.get("/hikingplaces/:id", getHikingPlace);
 
 router.post("/hikingplaces", authRequired, validateSchema(createHikingPlaceSchema), createHikingPlace);
 

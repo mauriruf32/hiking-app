@@ -2,7 +2,7 @@ import Landing from './Views/Landing/Landing';
 import Home from './Views/Home/Home';
 import { Route, Routes  } from "react-router-dom";
 import LogOut from './Components/LogOut/LogOut';
-import Profile from './Views/Profile/Profile';
+import DetailPage from './Views/DetailPage/DetailPage.jsx';
 import HikingForm from './Views/HikingForm/HikingForm.jsx';
 import Registration from './Views/Registration/Registration.jsx';
 import Login from './Views/LogIn/LogIn.jsx';
@@ -27,6 +27,7 @@ function App() {
         <Route path="/home" element={<Home  />} />
         <Route path="/register" element={<Registration  />} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/hikingplaces/:id" element={<DetailPage/>} />
 
       <Route element={<ProtectedRoute/>}>
         <Route path="/logout" element={<LogOut  />} />

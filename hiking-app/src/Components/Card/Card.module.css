@@ -45,6 +45,8 @@
 }
 
 .informacion{
+  margin:20px 0 0 0;
+  padding: 15px;
   font-family: 'Aloja', cursive;;
   text-align: left;
   background-color: #edededc2;

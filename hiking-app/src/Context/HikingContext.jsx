@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { createHikingRequest, getHikingsRequest, deleteHikingsRequest, getHikingByNameRequest } from "../api/hikings";
+import { createHikingRequest, getHikingsRequest, deleteHikingsRequest, getHikingByNameRequest, getHikingRequest } from "../api/hikings";
 
 const HikingContext = createContext();
 
@@ -18,6 +18,16 @@ export function HikingProvider({ children }) {
     const getHikingPlaces = async () => {
         try {
             const res = await getHikingsRequest();
+            setHikings(res.data);
+        } catch (error) {
+            console.error(error);
+        }
+       
+    }
+
+    const getHikingPlaceById = async (id) => {
+        try {
+            const res = await getHikingRequest(id);
             setHikings(res.data);
         } catch (error) {
             console.error(error);
@@ -56,6 +66,7 @@ export function HikingProvider({ children }) {
             getHikingPlaces,
             deleteHiking,
             getHikingByName,
+            getHikingPlaceById,
         }}
         >
             {children}

@@ -21,22 +21,23 @@ const Card = ({hiking}) => {
         <div className={style.flip_card_front}>
 
           <img src={hiking.image} alt="imagen" style={{ width: "300px", height: "300px" }} />
-          <div className={style.informacion}>
+   
+        </div>
+        <div className={style.flip_card_back}>
+
+
+          <Mapa lat={parseFloat(hiking.lat)} lng={parseFloat(hiking.lng)} />
+          
+        </div>
+        
+      </div>
+      <div className={style.informacion}>
             <p className={style.name}>{hiking.name}</p>
             <p className={style.details}>País: {hiking.country} <img src={hiking.flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
             <p className={style.details}>Dificultad: {hiking.continent}</p>
             <p className={style.details}>Continente: </p>
+           <Link to={`/hikingplaces/${hiking.id}`}> <button>+INFO</button></Link>
           </div>
-        </div>
-        <div className={style.flip_card_back}>
-        {/* {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button  onClick={handleFavorite}>🤍</button>
-      )} */}
-          <Mapa lat={parseFloat(hiking.lat)} lng={parseFloat(hiking.lng)} />
-        </div>
-      </div>
     </div>
   );
 };
