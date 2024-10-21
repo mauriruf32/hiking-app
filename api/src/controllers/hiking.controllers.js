@@ -1,6 +1,5 @@
 const { where } = require("sequelize");
 const { HikingPlace } = require("../db");
-const { User } = require("../db");
 
 const getHikingPlaces = async (req, res) => {
     const hikingPlaces = await HikingPlace.findAll();

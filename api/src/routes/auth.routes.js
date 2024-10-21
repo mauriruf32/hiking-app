@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { login, register, logout, profile, verifyToken, profileHikingPlaces } = require ("../controllers/auth.controller.js");
+const { login, register, logout, profile, verifyToken, profileHikingPlaces, createComment, getComments } = require ("../controllers/auth.controller.js");
 const { authRequired } = require("../middlewares/validateToken.js");
 const { validateSchema } = require("../middlewares/validator.middleware.js");
 const  { registerSchema, loginSchema } = require( "../auth.schema.js");
@@ -11,6 +11,10 @@ router.post("/register", validateSchema(registerSchema), register);
 router.post("/login", validateSchema(loginSchema), login);
 
 router.post("/logout", logout);
+
+router.post("/comments", authRequired, createComment);
+
+router.get("/comments", getComments);
 
 router.get("/profile", authRequired, profile);
 

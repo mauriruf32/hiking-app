@@ -1,4 +1,4 @@
-const { User, HikingPlace } = require("../db");
+const { User, HikingPlace, Comment } = require("../db");
 const bcrypt  = require("bcryptjs");
 const { createAccessToken } = require("../libs/jwt.js");
 const { Op } = require('sequelize');
@@ -97,7 +97,17 @@ const profile = async (req, res) => {
     });
 };
 
+const getComments = async (req, res) => {
+    const comments = await Comment.findAll();
+    res.json(comments);
+}
 
+const createComment = async (req, res) => {
+    const { description, userId, hikingId } = req.body;
+    const comment = new Comment({ description, userId, hikingId });
+    const savedComment = await comment.save();
+    res.json(savedComment);
+}
 
 const profileHikingPlaces = async (req, res) => {
     const {id} = req.params;
@@ -133,4 +143,6 @@ module.exports = {
     profile,
     verifyToken,
     profileHikingPlaces,
+    getComments,
+    createComment,
 };
