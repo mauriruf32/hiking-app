@@ -10,6 +10,7 @@ import { AuthProvider } from './Context/AuthContext';
 import ProtectedRoute from './ProtectedRoute.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import { HikingProvider } from './Context/HikingContext.jsx';
+import ProfileHikings from './Components/Cards/ProfileHikings.jsx';
 
 
 
@@ -29,7 +30,7 @@ function App() {
 
       <Route element={<ProtectedRoute/>}>
         <Route path="/logout" element={<LogOut  />} />
-        <Route path="/profile" element={<Profile  />} />
+        <Route path="/profile" element={<ProfileHikings  />} />
         <Route path="/hikingform" element={<HikingForm  />} />
         {/* <Route path="/home" element={<Home  />} /> */}
 

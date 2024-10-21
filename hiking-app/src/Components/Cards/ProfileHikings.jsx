@@ -18,7 +18,7 @@ const ProfileHikings = () => {
           <CardProfile key={hiking.id} hiking={hiking} />
         ))
       ) : (
-        <p>No tienes caminatas registradas.</p>
+        <p>Aun no has creado nigun sendero.</p>
       )}
     </div>
   );
