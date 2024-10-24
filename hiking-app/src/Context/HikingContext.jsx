@@ -28,7 +28,7 @@ export function HikingProvider({ children }) {
     const getHikingPlaceById = async (id) => {
         try {
             const res = await getHikingRequest(id);
-            setHikings(res.data);
+            setHikings(res.data.data);
         } catch (error) {
             console.error(error);
         }

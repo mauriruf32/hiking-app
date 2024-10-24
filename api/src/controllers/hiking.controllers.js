@@ -14,8 +14,25 @@ const createHikingPlace = async (req, res) => {
 
 };
 
+// const getHikingPlace = async (req, res) => {
+//     try {
+//         const id = req.params.id; // Asegúrate de que este es el ID correcto
+//         console.log('ID passed to findByPk:', id); // Agrega este log
+//         const hikingPlace = await HikingPlace.findByPk(id);
+//         if (!hikingPlace) {
+//             return res.status(404).json({ message: 'Hiking place not found' });
+//         }
+//         res.json(hikingPlace);
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ message: 'Server error' });
+//     }
+// };
+
+
 const getHikingPlace = async (req, res) => {
-   const hikingPlace = await HikingPlace.findByPk(req.params.id);
+    const { id } = req.params;
+   const hikingPlace = await HikingPlace.findByPk(id);
    if (!hikingPlace) return res.status(404).json({message: "Hiking Place not found"})
    res.json(hikingPlace)
 };

@@ -2,7 +2,7 @@ import axios from "./axios";
 
 export const getHikingsRequest = () => axios.get(`/hikingplaces`);
 
-export const getHikingRequest = id => axios.get(`/hikingplaces/${id}`);
+export const getHikingRequest = (id) => axios.get(`/hikingplaces/${id}`);
 
 export const getHikingByNameRequest = name => axios.get(`/hikingplaces/?name=${name}`);
 

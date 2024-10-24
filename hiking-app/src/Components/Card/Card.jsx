@@ -1,5 +1,5 @@
 // Card.jsx
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import style from "./Card.module.css";
 import Mapa from "../Mapa/Mapa";
 import { addFav } from "../../redux/actions";
@@ -8,6 +8,8 @@ import React, { useState, useEffect } from "react";
 
 
 const Card = ({hiking}) => {
+  const { id } = useParams();
+
   // const { getHikingPlaces, hikings } = useHikings();
 // console.log(hikings)
 

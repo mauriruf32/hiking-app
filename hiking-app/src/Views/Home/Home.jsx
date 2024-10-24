@@ -21,7 +21,7 @@ console.log(hinkings)
 
       <div className={style.containerMain}>
       <div className={style.cardscontainer}>
-        {hinkings?.map((hiking) => (
+        {Array.isArray(hinkings) && hinkings?.map((hiking) => (
             <Card hiking={hiking} key={hiking.id} />
 
       ))}

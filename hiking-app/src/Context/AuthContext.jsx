@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {RegisterRequest, LoginRequest, verifyTokenRequest} from "../api/auth";
+import {RegisterRequest, LoginRequest, verifyTokenRequest, createCommentRequest, getCommentByIdRequest, getCommentsRequest} from "../api/auth";
 import Cookies  from "js-cookie";
 
 export const AuthContext = createContext();
@@ -21,6 +21,8 @@ export const AuthProvider = ({children}) => {
     const [ isAuthenticated, setIsAuthenticated ] = useState(false);
 // Creamos el estado para el manejo de errores
     const [ errors, serErrors ] = useState([]);
+
+    const [comments, setComments] = useState([]);
 
     const [ loading, setLoading ] = useState(true);
 
@@ -53,6 +55,32 @@ const signIn = async (user) => {
         serErrors([error.response.data.message]);
     }
 };
+
+const createComment = async (comment) => {
+    const res = await createCommentRequest(comment);
+    console.log(res)
+    setIsAuthenticated(true);
+
+}
+
+const getComments = async () => {
+    try {
+        const res = await getCommentsRequest();
+        setComments(res.data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getCommentById = async (id) => {
+    try {
+        const res = await getCommentByIdRequest(id);
+        console.log(res)
+    } catch (error) {
+        console.error(error);
+    }
+   
+}
 
 const logout = () => {
     Cookies.remove("token");
@@ -110,8 +138,12 @@ useEffect(() => {
             logout,
             loading,
             user,
+            comments,
             isAuthenticated,
             errors,
+            createComment,
+            getComments,
+            getCommentById,
         }}>
             {children}
         </AuthContext.Provider>

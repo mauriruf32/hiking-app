@@ -109,6 +109,14 @@ const createComment = async (req, res) => {
     res.json(savedComment);
 }
 
+const hikingPlaceComment = async (req, res) => {
+    const {id} = req.params;
+    const comments = await Comment.findAll({
+        where: {hikingId: id},
+    });
+    res.json(comments);
+ };
+
 const profileHikingPlaces = async (req, res) => {
     const {id} = req.params;
     const hikings = await HikingPlace.findAll({
@@ -145,4 +153,5 @@ module.exports = {
     profileHikingPlaces,
     getComments,
     createComment,
+    hikingPlaceComment,
 };
