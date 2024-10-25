@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Mapa from '../../Components/Mapa/Mapa';
+import Comments from "../../Components/Comments/Comments";
 
 const DetailPage = () => {
     const { id } = useParams();
@@ -43,48 +44,14 @@ const DetailPage = () => {
                     <p>País: {hikingPlace.country}</p>
                     <p>Dificultad: {hikingPlace.difficulty}</p>
                     <p>Duración: {hikingPlace.duration}</p>
-          <Mapa lat={parseFloat(hikingPlace.lat)} lng={parseFloat(hikingPlace .lng)} />
-
+                    <Mapa lat={parseFloat(hikingPlace.lat)} lng={parseFloat(hikingPlace.lng)} />
                 </div>
             ) : (
                 <p>Sendero no encontrado</p>
             )}
+            <Comments hikingId={hikingPlace ? hikingPlace.id : null} />
         </div>
     );
 };
 
 export default DetailPage;
-
-// import React, { useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
-// import { useHikings } from '../../Context/HikingContext';
-
-
-
-// const DetailPage = () => {
-//     const { id } = useParams();
-//     const { getHikingPlaceById, hinkings } = useHikings();
-
-//     useEffect(() =>{
-//         getHikingPlaceById(id);
-//     }, [])
-
-
-
-//     return (
-//         <div>
-//         {
-//            Array.isArray(hinkings) && hinkings?.map((hiking) => (
-//                 <div key={hiking.id}>
-//                     <h1>Descripción: </h1>
-//                     <p>País: </p>
-//                     <p>Dificultad: {hiking.difficulty}</p>
-//                     <p>Duración: {hiking.duration}</p>
-//                 </div>
-//             ))
-//         }
-//     </div>
-//     );
-// };
-
-// export default DetailPage;

@@ -8,6 +8,7 @@ const SearchBar = () => {
   const { getHikingByName } = useHikings();
 
   const handleInputChange = (e) => {
+    e.preventDefault()
     setSearchTerm(e.target.value);
     (getHikingByName(e.target.value));
   };

@@ -109,6 +109,13 @@ const createComment = async (req, res) => {
     res.json(savedComment);
 }
 
+const getComment = async (req, res) => {
+    const { id } = req.params;
+   const comment = await Comment.findByPk(id);
+   if (!comment) return res.status(404).json({message: "Comment not found"})
+   res.json(comment)
+};
+
 const hikingPlaceComment = async (req, res) => {
     const {id} = req.params;
     const comments = await Comment.findAll({
@@ -154,4 +161,5 @@ module.exports = {
     getComments,
     createComment,
     hikingPlaceComment,
+    getComment,
 };
