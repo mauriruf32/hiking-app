@@ -21,7 +21,7 @@ const LogIn = () => {
   }, [isAuthenticated]);
 
   return (
-    <div className={style.form}>
+    <div className={style.formcontainer} >
        {
         signInErrors.map((error, i) => (
           <div className={style.errors} key={i}>
@@ -30,16 +30,14 @@ const LogIn = () => {
         ))
        }
       <h1>Log In</h1>
-      <form onSubmit={onSubmit}>
+      <form className={style.form} onSubmit={onSubmit}>
 
-          <div className={style.inputbox}>
-            <h2>Email</h2>
+          <div className={style.inputs} >
+            <h5>Email</h5>
             <input type="email" {...register("email", {required: true})} placeholder='Email' />
             {errors.email && (<p>Email is required</p> )}
-          </div>
-
-          <div className={style.inputbox}>
-          <h2>Password</h2>
+      
+          <h5>Password</h5>
 
             <input type="password" {...register("password", {required: true})} placeholder='Password' />
             {errors.password && (<p>Password is required</p> )}
@@ -49,10 +47,10 @@ const LogIn = () => {
           Log In
         </button>
       </form>
-      No tienes una cuenta?
         
         <Link to="/register">
-        <button >Registrate</button>
+      No tienes una cuenta?
+      Registrate
         </Link>
 
     </div>

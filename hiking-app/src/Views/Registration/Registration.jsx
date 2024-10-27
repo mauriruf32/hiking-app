@@ -22,7 +22,7 @@ const Registration = () => {
     <div className={styles.formcontainer} >
         {
             RegisterErrors.map((error, i) => (
-                <div key={i}>
+                <div className={styles.errors} key={i}>
                     {error}
                 </div>
             ))
@@ -32,7 +32,7 @@ const Registration = () => {
             <h6>Nombre</h6>
 
             <input className={styles.inputs} type="text" {...register("firstName", {required: true})} placeholder='Name' />
-            {errors.firstName && ( <p>Username is required</p> )}
+            {errors.firstName && ( <p>Name is required</p> )}
 
             <h6>Email</h6>
 
@@ -44,13 +44,11 @@ const Registration = () => {
             {errors.password && (<p>Password is required</p> )}
             
             <button type='submit'>
-                Registrar
+               <p> Crear cuenta</p>
             </button>
         </form>
-        Ya tienes una cuenta?
-        
         <Link to="/login">
-        <button >LogIn</button>
+        <p>Ya tienes una cuenta? Click Aqui!</p> 
         </Link>
 
     </div>

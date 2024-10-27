@@ -1,7 +1,8 @@
 .formcontainer {
-    background-color: #ffffff00;
+    background-color: #ffffffd3;
+    align-content: center;
     height: 300px;
-    width: 400px;
+    width: 500px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -13,7 +14,25 @@
 
 }
 
+.form button {
+    height: 30px;
+    width: 35%;
+    text-align: center;
+    border-radius: 10%;
+    color: #000;
+    background-color: aqua;
+}
+
 .inputs {
     margin: 5px 0 5px ;
     
 }
+
+p {
+    font-weight: bold;
+}
+
+.errors {
+    color: red;
+  }
+    
