@@ -1,2 +1,6 @@
-.env
-node_modules
+/api/node_modules
+/hiking-app/node_modules
+/api/.env
+/hiking-app/.env
+/hiking-app/segundo.js
+/api/segundo.js

@@ -1,19 +1,37 @@
-import React from 'react';
 import style from "./Cards.module.css";
 import { useHikings } from '../../Context/HikingContext';
 import { useAuth } from '../../Context/AuthContext';
+import React, { useState } from 'react';
+import { AiFillSmile, AiFillHeart, AiOutlineHeart, AiOutlineComment } from  "react-icons/ai";
 
 const CardProfile = ({hiking}) => {
   const { user } = useAuth();
-
+  const [ like, setLike ] = useState(false);
+  const [ count, setCount ] = useState(0);
+  
+  const toggleLike = () => {
+    if(!like){
+      setLike(true);
+      setCount(count + 1);
+    } else {
+      setLike(false);
+      setCount(count - 1);
+    }
+  };
   const { deleteHiking } = useHikings();
 
   return (
-    <div className={style.flip_card}>
-      <div className={style.flip_card_inner}>
-        <div className={style.flip_card_front}>
-          <img src={hiking.image} alt="imagen" style={{ width: "300px", height: "300px" }} />
-          <div className={style.informacion}>
+    <div className='container text-center'>
+    <div className='card card-dark m-auto'
+    style={{width: 300, cursor:"pointer"}}>
+    <div className='card-header fs-xl'>
+      <AiFillSmile />
+      <small>HikingPlace</small>
+    </div>
+    <img src={hiking.image} alt="img" style={{ height:
+      "fit-content"
+    }} />
+              <div className={style.informacion}>
             <p className={style.name}>{hiking.name}</p>
             <p className={style.details}>País: {hiking.country} <img src={hiking.flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
             <p className={style.details}>Dificultad: {hiking.difficulty}</p>
@@ -21,16 +39,21 @@ const CardProfile = ({hiking}) => {
             <p className={style.details}>Latitud: {hiking.lat}</p>
             <p className={style.details}>Longitud: {hiking.lng}</p>
           </div>
-          <div>
-            <button onClick={() => {
+    <div className='card-footer fs-xl d-flex' style={{ justifyContent:"space-between"}}>
+    <AiOutlineComment /> {" "}
+    {like ? <AiFillHeart className='text-danger' onClick={toggleLike} /> : <AiOutlineHeart onClick={toggleLike} />  } {count}
+    </div>
+    <button onClick={() => {
               deleteHiking(hiking.id);
             }} >Delete</button>
             <button>Edit</button>
-          </div>
-        </div>
-
-      </div>
     </div>
+    <div>
+
+          </div>
+    </div>
+
+
   );
 };
 

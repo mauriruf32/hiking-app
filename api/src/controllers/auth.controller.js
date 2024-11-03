@@ -1,4 +1,4 @@
-const { User, HikingPlace, Comment } = require("../db");
+const { User, HikingPlace, Comment, Like } = require("../db");
 const bcrypt  = require("bcryptjs");
 const { createAccessToken } = require("../libs/jwt.js");
 const { Op } = require('sequelize');
@@ -100,14 +100,14 @@ const profile = async (req, res) => {
 const getComments = async (req, res) => {
     const comments = await Comment.findAll();
     res.json(comments);
-}
+};
 
 const createComment = async (req, res) => {
     const { description, userId, hikingId } = req.body;
     const comment = new Comment({ description, userId, hikingId });
     const savedComment = await comment.save();
     res.json(savedComment);
-}
+};
 
 const getComment = async (req, res) => {
     const { id } = req.params;
@@ -130,6 +130,51 @@ const profileHikingPlaces = async (req, res) => {
         where: {userId: id},
     });
     res.json(hikings);
+ };
+
+ const getLikes = async (req, res) => {
+    const likes = await Like.findAll();
+    res.json(likes);
+};
+
+const createLike = async (req, res) => {
+    const { userId, hikingId } = req.body;
+    const like = new Like({ userId, hikingId });
+    const savedLike = await like.save();
+    res.json(savedLike);
+};
+
+const getLike = async (req, res) => {
+    const { id } = req.params;
+   const like = await Like.findByPk(id);
+   if (!like) return res.status(404).json({message: "Like not found"})
+   res.json(like)
+};
+
+const deleteLike = async (req, res) => {
+    const { userId, hikingId } = req.params; 
+    try {
+        const affectedRows = await Like.destroy({ 
+            where: { userId: userId, hikingId: hikingId } 
+        }); 
+        
+        if (affectedRows === 0) {
+            return res.status(404).json({ message: "Like not found" }); 
+        }
+        
+        return res.status(204).send(); 
+    } catch (error) {
+        console.error(error); 
+        return res.status(500).json({ message: "Error deleting like", error }); 
+    }
+};
+
+const hikingPlaceLikes = async (req, res) => {
+    const {id} = req.params;
+    const likes = await Like.findAll({
+        where: {hikingId: id},
+    });
+    res.json(likes);
  };
 
 const verifyToken = async (req, res) => {
@@ -162,4 +207,9 @@ module.exports = {
     createComment,
     hikingPlaceComment,
     getComment,
+    createLike,
+    getLikes,
+    hikingPlaceLikes,
+    getLike,
+    deleteLike,
 };

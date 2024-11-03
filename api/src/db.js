@@ -4,6 +4,7 @@ const FavoriteModel = require("./models/Favorite");
 const UserModel = require("./models/User");
 const HikingModel = require("./models/HikingPlace");
 const CommentModel = require("./models/Comment");
+const LikeModel = require("./models/Like");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
 
@@ -17,9 +18,10 @@ FavoriteModel(sequelize);
 UserModel(sequelize);
 HikingModel(sequelize);
 CommentModel(sequelize);
+LikeModel(sequelize);
 
 
-const { User, Favorite, HikingPlace, Comment } = sequelize.models;
+const { User, Favorite, HikingPlace, Comment, Like } = sequelize.models;
 User.belongsToMany(Favorite, { through: "user_favorite" });
 Favorite.belongsToMany(User, { through: "user_favorite" });
 
@@ -53,10 +55,31 @@ Comment.belongsTo(User, {
   targetId: "id"
 });
 
+HikingPlace.hasMany(Like, {
+  foreignKey: "hikingId",
+  targetId: "id"
+});
+
+Like.belongsTo(HikingPlace, {
+  foreignKey: "hikingId",
+  targetId: "id"
+});
+
+User.hasMany(Like, {
+  foreignKey: "userId",
+  targetId: "id"
+});
+
+Like.belongsTo(User, {
+  foreignKey: "userId",
+  targetId: "id"
+});
+
 module.exports = {
   User,
   Favorite,
   HikingPlace,
   Comment,
+  Like,
   conn: sequelize,
 };

@@ -1,5 +1,16 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {RegisterRequest, LoginRequest, verifyTokenRequest, createCommentRequest, getCommentByIdRequest, getCommentsRequest} from "../api/auth";
+import {
+    RegisterRequest, 
+    LoginRequest, 
+    verifyTokenRequest, 
+    createCommentRequest, 
+    getCommentByIdRequest, 
+    getCommentsRequest, 
+    createLikeRequest,
+    deleteLikeRequest,
+    getLikesRequest,
+    getLikeByIdRequest,
+} from "../api/auth";
 import Cookies  from "js-cookie";
 
 export const AuthContext = createContext();
@@ -23,6 +34,9 @@ export const AuthProvider = ({children}) => {
     const [ errors, serErrors ] = useState([]);
 
     const [comments, setComments] = useState([]);
+
+    const [likes, setLikes] = useState([]);
+
 
     const [ loading, setLoading ] = useState(true);
 
@@ -61,7 +75,7 @@ const createComment = async (comment) => {
     console.log(res)
     setIsAuthenticated(true);
 
-}
+};
 
 const getComments = async () => {
     try {
@@ -70,7 +84,7 @@ const getComments = async () => {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
 const getCommentById = async (id) => {
     try {
@@ -79,8 +93,42 @@ const getCommentById = async (id) => {
     } catch (error) {
         console.error(error);
     }
-   
-}
+};
+
+const getLikes = async () => {
+    try {
+        const res = await getLikesRequest();
+        setLikes(res.data);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const getLikeById = async (id) => {
+    try {
+        const res = await getLikeByIdRequest(id);
+        console.log(res)
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const createLike = async (like) => {
+    const res = await createLikeRequest(like);
+    console.log(res)
+    setIsAuthenticated(true);
+};
+
+const deleteLike = async (userId, hikingId) => {
+    try {
+        const res = await deleteLikeRequest(userId, hikingId);
+        if (res.status === 204) {
+            setLikes(likes.filter(like => like.userId !== userId || like.hikingId !== hikingId));
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const logout = () => {
     Cookies.remove("token");
@@ -139,11 +187,16 @@ useEffect(() => {
             loading,
             user,
             comments,
+            likes,
             isAuthenticated,
             errors,
             createComment,
             getComments,
             getCommentById,
+            createLike,
+            getLikes,
+            getLikeById,
+            deleteLike,
         }}>
             {children}
         </AuthContext.Provider>

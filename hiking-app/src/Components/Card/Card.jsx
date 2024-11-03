@@ -1,48 +1,109 @@
-// Card.jsx
 import { Link, useParams } from "react-router-dom";
 import style from "./Card.module.css";
 import Mapa from "../Mapa/Mapa";
-import { addFav } from "../../redux/actions";
-import React, { useState, useEffect } from "react";
-// import { useHikings } from '../../Context/HikingContext';
+import React from 'react';
 
 
-const Card = ({hiking}) => {
+
+import Likes from "../Comments/Likes";
+
+const Card = ({ hiking }) => {
   const { id } = useParams();
 
-  // const { getHikingPlaces, hikings } = useHikings();
-// console.log(hikings)
 
-  // useEffect(() => {
-  //   getHikingPlaces();
-  // }, []);
+  // Filtra los likes para obtener solo los del hiking actual
+ 
+ 
 
   return (
     <div className={style.flip_card}>
       <div className={style.flip_card_inner}>
         <div className={style.flip_card_front}>
-
           <img src={hiking.image} alt="imagen" style={{ width: "300px", height: "300px" }} />
-   
         </div>
         <div className={style.flip_card_back}>
-
-
           <Mapa lat={parseFloat(hiking.lat)} lng={parseFloat(hiking.lng)} />
-          
         </div>
-        
       </div>
       <div className={style.informacion}>
-            <p className={style.name}>{hiking.name}</p>
-            <p className={style.details}>País: {hiking.country} <img src={hiking.flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
-            <p className={style.details}>Dificultad: {hiking.continent}</p>
-            <p className={style.details}>Continente: </p>
-           <Link to={`/hikingplaces/${hiking.id}`}> <button>+INFO</button></Link>
-          </div>
+        <p className={style.name}>{hiking.name}</p>
+        <p className={style.details}>País: {hiking.country} <img src={hiking.flag} alt="" style={{ width: "20px", height: "15px" }} /></p>
+        <p className={style.details}>Dificultad: {hiking.continent}</p>
+        <p className={style.details}>Continente: </p>
+        <Link to={`/hikingplaces/${hiking.id}`}>
+          <button>+INFO</button>
+        </Link>
+      </div>
+      <Likes hikingId={hiking.id} />
+
+
     </div>
   );
 };
 
 export default Card;
+
+
+// Card.jsx
+// import { Link, useParams } from "react-router-dom";
+// import style from "./Card.module.css";
+// import Mapa from "../Mapa/Mapa";
+// import React, { useState } from 'react';
+// import { useAuth } from '../../Context/AuthContext';
+
+// import { AiFillSmile, AiFillHeart, AiOutlineHeart, AiOutlineComment } from  "react-icons/ai";
+
+
+// const Card = ({hiking}) => {
+//   const { id } = useParams();
+//   const [ like, setLikes ] = useState(false);
+//   const [ count, setCount ] = useState(0);
+//   const { likes } = useAuth()
+
+//   const hikingLikes = likes.filter(like => like.hikingId === hiking.id);
+  
+//   const toggleLike = () => {
+//     if(!likes){
+//       setLikes(true);
+//       setCount(count + 1);
+//     } else {
+//       setLikes(false);
+//       setCount(count - 1);
+//     }
+//   };
+
+
+//   return (
+//     <div className={style.flip_card}>
+//       <div className={style.flip_card_inner}>
+//         <div className={style.flip_card_front}>
+
+//           <img src={hiking.image} alt="imagen" style={{ width: "300px", height: "300px" }} />
+   
+//         </div>
+//         <div className={style.flip_card_back}>
+
+
+//           <Mapa lat={parseFloat(hiking.lat)} lng={parseFloat(hiking.lng)} />
+          
+//         </div>
+        
+//       </div>
+//       <div className={style.informacion}>
+//             <p className={style.name}>{hiking.name}</p>
+//             <p className={style.details}>País: {hiking.country} <img src={hiking.flag} alt="" style={{ width: "20px", height: "15px" }}  /></p>
+//             <p className={style.details}>Dificultad: {hiking.continent}</p>
+//             <p className={style.details}>Continente: </p>
+//            <Link to={`/hikingplaces/${hiking.id}`}> <button>+INFO</button></Link>
+//           </div>
+//           <div className='card-footer fs-xl d-flex' style={{ justifyContent:"space-between"}}>
+//     <AiOutlineComment /> {" "}
+//     {likes ? <AiFillHeart className='text-danger' onClick={toggleLike} /> : <AiOutlineHeart onClick={toggleLike} />  } {count}
+//     </div>
+//     </div>
+//   );
+// };
+
+// export default Card;
+
 

@@ -11,6 +11,7 @@ import ProtectedRoute from './ProtectedRoute.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import { HikingProvider } from './Context/HikingContext.jsx';
 import ProfileHikings from './Components/Cards/ProfileHikings.jsx';
+import Favorite from './Components/Card/Favorite.jsx';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/register" element={<Registration  />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/hikingplaces/:id" element={<DetailPage/>} />
+        {/* <Route path="/favorite" element={<Favorite/>} /> */}
 
       <Route element={<ProtectedRoute/>}>
         <Route path="/logout" element={<LogOut  />} />
