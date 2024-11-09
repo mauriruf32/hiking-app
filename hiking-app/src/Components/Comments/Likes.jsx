@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillHeart, AiOutlineHeart, AiOutlineComment } from "react-icons/ai";
 import { useAuth } from '../../Context/AuthContext';
+import styles from "./LikesAndComments.module.css";
 
 const Likes = ({ hikingId }) => {
     const [like, setLike] = useState(false);
@@ -47,7 +48,7 @@ const Likes = ({ hikingId }) => {
     };
 
     return (
-        <div>
+        <div >
             <div className='card-footer fs-xl d-flex' style={{ justifyContent: "space-between" }}>
                 <AiOutlineComment /> {" "}
                 {like ? (

@@ -16,7 +16,7 @@ const Mapa = ({ lat, lng, Sendero }) => {
       <MapContainer 
         center={[lat, lng]} 
         zoom={10} 
-        style={{ height: "300px", width: "100%" }}
+        style={{ height: "200px", width: "250px", margin:"15px"  }}
       >
         <TileLayer 
           url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'

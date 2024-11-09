@@ -1,137 +1,127 @@
 
 export const hikingPlaces = [
   {
-    País: "España",
-    Flag:"https://flagcdn.com/w320/es.png",
-    Imagen: "https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938144/aGlraW5nLWFwcC8wMS5fQ2FtaW5vX2RlX1NhbnRpYWdvX3c1anVodw==/drilldown",
-    Sendero: "Camino de Santiago",
-    lat: "42.878213",
-    lng: "-8.544844",
-    Descripción: "Un recorrido histórico que atraviesa España hasta llegar a Santiago de Compostela",
-    Dificultad: "Moderada",
-    Región: "Galicia",
-    Continente: "Europa"
+    "country": "España",
+    "flag": "https://flagcdn.com/w320/es.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938144/aGlraW5nLWFwcC8wMS5fQ2FtaW5vX2RlX1NhbnRpYWdvX3c1anVodw==/drilldown",
+    "name": "Camino de Santiago",
+    "lat": 42.878213,
+    "lng": -8.544844,
+    "duration": "Un recorrido histórico que atraviesa España hasta llegar a Santiago de Compostela",
+    "difficulty": "Moderada",
+    "continent": "Europa"
   },
   {
-    País: "España",
-    Flag:"https://flagcdn.com/w320/es.png",
-    Imagen: "https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938150/aGlraW5nLWFwcC8wMi5fUGljb3NfZGVfRXVyb3BhX2JnaGlsZg==/drilldown",
-    Sendero: "Picos de Europa",
-    lat: "43.187687",
-    lng: "-4.841389",
-    Descripción: "Montañas escarpadas con vistas espectaculares y fauna diversa",
-    Dificultad: "Difícil",
-    Región: "Cantabria",
-    Continente: "Europa"
+    "country": "España",
+    "flag": "https://flagcdn.com/w320/es.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938150/aGlraW5nLWFwcC8wMi5fUGljb3NfZGVfRXVyb3BhX2JnaGlsZg==/drilldown",
+    "name": "Picos de Europa",
+    "lat": 43.187687,
+    "lng": -4.841389,
+    "duration": "Montañas escarpadas con vistas espectaculares y fauna diversa",
+    "difficulty": "Difícil",
+    "continent": "Europa"
   },
   {
-    País: "Francia",
-    Flag:"https://flagcdn.com/w320/fr.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938154/aGlraW5nLWFwcC8wMy5fVG91cl9kdV9Nb250X0JsYW5jX2plc29ybg==/drilldown",
-    Sendero: "TourduMontBlanc",
-    lat: "45.832622",
-    lng: "6.864717",
-    Descripción: "Un circuito alrededor del Mont Blanc, el pico más alto de los Alpes",
-    Dificultad: "Difícil",
-    Región: "Alpes",
-    Continente: "Europa"
+    "country": "Francia",
+    "flag": "https://flagcdn.com/w320/fr.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938154/aGlraW5nLWFwcC8wMy5fVG91cl9kdV9Nb250X0JsYW5jX2plc29ybg==/drilldown",
+    "name": "Tour du Mont Blanc",
+    "lat": 45.832622,
+    "lng": 6.864717,
+    "duration": "Un circuito alrededor del Mont Blanc, el pico más alto de los Alpes",
+    "difficulty": "Dificil",
+    "continent": "Europa"
   },
   {
-    País: "Francia",
-    Flag:"https://flagcdn.com/w320/fr.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ba6a874c89460a9d8ba7f127aec43277/detailed",
-    Sendero: "GR20",
-    lat: "42.181095",
-    lng: "9.133677",
-    Descripción: "Considerado uno de los senderos más difíciles de Europa, cruza la isla de Córcega",
-    Dificultad: "Muy Difícil",
-    Región: "Córcega",
-    Continente: "Europa"
+    "country": "Francia",
+    "flag": "https://flagcdn.com/w320/fr.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ba6a874c89460a9d8ba7f127aec43277/detailed",
+    "name": "GR20",
+    "lat": 42.181095,
+    "lng": 9.133677,
+    "duration": "Considerado uno de los senderos más difíciles de Europa, cruza la isla de Córcega",
+    "difficulty": "Muy Difícil",
+    "continent": "Europa"
   },
   {
-    País: "Italia",
-    Flag:"https://flagcdn.com/w320/it.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668292/eGdvZmVjeXZibGpnaGNqZGNxenc=/drilldown",
-    Sendero: "Cinque Terre",
-    lat: "44.127660",
-    lng: "9.695649",
-    Descripción: "Senderos a lo largo de la costa de Liguria, conectando cinco pintorescos pueblos",
-    Dificultad: "Moderada",
-    Región: "Liguria",
-    Continente: "Europa"
+    "country": "Italia",
+    "flag": "https://flagcdn.com/w320/it.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668292/eGdvZmVjeXZibGpnaGNqZGNxenc=/drilldown",
+    "name": "Cinque Terre",
+    "lat": 44.127660,
+    "lng": 9.695649,
+    "duration": "Senderos a lo largo de la costa de Liguria, conectando cinco pintorescos pueblos",
+    "difficulty": "Moderada",
+    "continent": "Europa"
   },
   {
-    País: "Italia",
-    Flag:"https://flagcdn.com/w320/it.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/fd65c1cb90ef02f420374fa8a52d3235/detailed",
-    Sendero: "Dolomitas",
-    lat: "46.433411",
-    lng: "11.851223",
-    Descripción: "Montañas espectaculares con rutas variadas, perfectas para senderismo y escalada",
-    Dificultad: "Moderada a Difícil",
-    Región: "Trentino-Alto Adige",
-    Continente: "Europa"
+    "country": "Italia",
+    "flag": "https://flagcdn.com/w320/it.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/fd65c1cb90ef02f420374fa8a52d3235/detailed",
+    "name": "Dolomitas",
+    "lat": 46.433411,
+    "lng": 11.851223,
+    "duration": "Montañas espectaculares con rutas variadas, perfectas para senderismo y escalada",
+    "difficulty": "Moderada a Difícil",
+    "continent": "Europa"
   },
   {
-    País: "Suiza",
-    Flag:"https://flagcdn.com/w320/ch.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/776c92eb97b65b98c4161dcea907a640/detailed",
-    Sendero: "Ruta de los Lagos (Lauterbrunnen)",
-    lat: "46.593553",
-    lng: "7.910019",
-    Descripción: "Paisajes alpinos impresionantes con lagos y cascadas",
-    Dificultad: "Moderada",
-    Región: "Berna",
-    Continente: "Europa"
+    "country": "Suiza",
+    "flag": "https://flagcdn.com/w320/ch.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/776c92eb97b65b98c4161dcea907a640/detailed",
+    "name": "Ruta de los Lagos (Lauterbrunnen)",
+    "lat": 46.593553,
+    "lng": 7.910019,
+    "duration": "Paisajes alpinos impresionantes con lagos y cascadas",
+    "difficulty": "Moderada",
+    "continent": "Europa"
   },
   {
-    País: "Suiza",
-    Flag:"https://flagcdn.com/w320/ch.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/99feb2cb0246fa0b9131fd6a8adeedce/detailed",
-    Sendero: "Haute Route",
-    lat: "46.084427",
-    lng: "7.460153",
-    Descripción: "Ruta clásica de alta montaña desde Chamonix en Francia hasta Zermatt en Suiza",
-    Dificultad: "Difícil",
-    Región: "Valais",
-    Continente: "Europa"
+    "country": "Suiza",
+    "flag": "https://flagcdn.com/w320/ch.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/99feb2cb0246fa0b9131fd6a8adeedce/detailed",
+    "name": "Haute Route",
+    "lat": 46.084427,
+    "lng": 7.460153,
+    "duration": "Ruta clásica de alta montaña desde Chamonix en Francia hasta Zermatt en Suiza",
+    "difficulty": "Difícil",
+    "continent": "Europa"
   },
   {
-    País: "Reino Unido",
-    Flag:"https://flagcdn.com/w320/gb.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ee32e898708602db0f853f1d3499a3a4/detailed",
-    Sendero: "West Highland Way",
-    lat: "56.822215",
-    lng: "-4.524765",
-    Descripción: "Un sendero que cruza las Tierras Altas de Escocia con paisajes impresionantes",
-    Dificultad: "Moderada",
-    Región: "Escocia",
-    Continente: "Europa"
+    "country": "Reino Unido",
+    "flag": "https://flagcdn.com/w320/gb.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ee32e898708602db0f853f1d3499a3a4/detailed",
+    "name": "West Highland Way",
+    "lat": 56.822215,
+    "lng": -4.524765,
+    "duration": "Un sendero que cruza las Tierras Altas de Escocia con paisajes impresionantes",
+    "difficulty": "Moderada",
+    "continent": "Europa"
   },
   {
-    País: "Reino Unido",
-    Flag:"https://flagcdn.com/w320/gb.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7f5b68dcde2f74cbbfd72fa0cb23fc9e/detailed",
-    Sendero: "Coast to Coast Walk",
-    lat: "54.459993",
-    lng: "-3.055261",
-    Descripción: "Ruta de costa a costa desde el Mar de Irlanda hasta el Mar del Norte",
-    Dificultad: "Moderada",
-    Región: "Inglaterra",
-    Continente: "Europa"
+    "country": "Reino Unido",
+    "flag": "https://flagcdn.com/w320/gb.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7f5b68dcde2f74cbbfd72fa0cb23fc9e/detailed",
+    "name": "Coast to Coast Walk",
+    "lat": 54.459993,
+    "lng": -3.055261,
+    "duration": "Ruta de costa a costa desde el Mar de Irlanda hasta el Mar del Norte",
+    "difficulty": "Moderada",
+    "continent": "Europa"
   },
   {
-    País: "Estados Unidos",
-    Flag:"hhttps://flagcdn.com/w320/us.png",
-    Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/305e02940377726b7fa781e2ffc2805a/detailed",
-    Sendero: "Appalachian Trail",
-    lat: "40.485162",
-    lng: "-77.484082",
-    Descripción: "Extenso sendero que atraviesa la cordillera de los Apalaches desde Georgia hasta Maine",
-    Dificultad: "Difícil",
-    Región: "Costa Este",
-    Continente: "América del Norte"
+    "country": "Estados Unidos",
+    "flag": "https://flagcdn.com/w320/us.png",
+    "image": "https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/305e02940377726b7fa781e2ffc2805a/detailed",
+    "name": "Appalachian Trail",
+    "lat": 40.485162,
+    "lng": -77.484082,
+    "duration": "Extenso sendero que atraviesa la cordillera de los Apalaches desde Georgia hasta Maine",
+    "difficulty": "Difícil",
+    "continent": "América del Norte"
   },
+
   {
     "country": "Estados Unidos",
     "flag":"https://flagcdn.com/w320/us.png",
@@ -144,8 +134,8 @@ export const hikingPlaces = [
     "continent": "América del Norte"
   },
   {
-    País: "Estados Unidos",
-    Flag:"https://flagcdn.com/w320/us.png",
+    "country": "Estados Unidos",
+    "flag":"https://flagcdn.com/w320/us.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718945184/MTMuX0pvaG5fTXVpcl9UcmFpbF9pdnpwenY=/drilldown",
     Sendero: "John Muir Trail",
     lat: "37.742558",
@@ -156,8 +146,8 @@ export const hikingPlaces = [
     Continente: "América del Norte"
   },
   {
-    País: "Canadá",
-    Flag:"https://flagcdn.com/w320/ca.png",
+    "country": "Canadá",
+    "flag":"https://flagcdn.com/w320/ca.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/3c866abb690a375834e9de909a9d93ba/detailed",
     Sendero: "West Coast Trail",
     lat: "48.628537",
@@ -168,8 +158,8 @@ export const hikingPlaces = [
     Continente: "América del Norte"
   },
   {
-    País: "Canadá",
-    Flag:"https://flagcdn.com/w320/ca.png",
+    "country": "Canadá",
+    "flag":"https://flagcdn.com/w320/ca.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718945024/MTUuX0JydWNlX1RyYWlsX2pkbnB0aQ==/drilldown",
     Sendero: "Bruce Trail",
     lat: "43.711606",
@@ -180,8 +170,8 @@ export const hikingPlaces = [
     Continente: "América del Norte"
   },
   {
-    País: "Perú",
-    Flag:"https://flagcdn.com/w320/pe.png",
+    "country": "Perú",
+    "flag":"https://flagcdn.com/w320/pe.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/310239b6b7f7ac282a217769c0fe950d/detailed",
     Sendero: "Camino Inca",
     lat: "-13.263563",
@@ -192,8 +182,8 @@ export const hikingPlaces = [
     Continente: "América del Sur"
   },
   {
-    País: "Perú",
-    Flag:"https://flagcdn.com/w320/pe.png",
+    "country": "Perú",
+    "flag":"https://flagcdn.com/w320/pe.png",
     Sendero: "Salkantay Trek",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7f83170c4e752407431719eb5ceaea21/detailed",
     lat: "-13.323987",
@@ -204,8 +194,8 @@ export const hikingPlaces = [
     Continente: "América del Sur"
   },
   {
-    País: "Argentina",
-    Flag:"https://flagcdn.com/w320/ar.png",
+    "country": "Argentina",
+    "flag":"https://flagcdn.com/w320/ar.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/85fc796736fcd1fa14376857d6b3add2/detailed",
     Sendero: "Fitz Roy",
     lat: "-49.276754",
@@ -216,8 +206,8 @@ export const hikingPlaces = [
     Continente: "América del Sur"
   },
   {
-    País: "Argentina",
-    Flag:"https://flagcdn.com/w320/ar.png",
+    "country": "Argentina",
+    "flag":"https://flagcdn.com/w320/ar.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718945289/MTkuX0h1ZWxsYV9BbmRpbmFfZDg4ZGh5/drilldown",
     Sendero: "Huella Andina",
     lat: "-40.777555",
@@ -228,8 +218,8 @@ export const hikingPlaces = [
     Continente: "América del Sur"
   },
   {
-    País: "Chile",
-    Flag:"https://flagcdn.com/w320/cl.png",
+    "country": "Chile",
+    "flag":"https://flagcdn.com/w320/cl.png",
     Sendero: "Torres del Paine",
     lat: "-51.220574",
     lng: "-72.996741",
@@ -239,8 +229,8 @@ export const hikingPlaces = [
     Continente: "América del Sur"
   },
   {
-    País: "Chile",
-    Flag:"https://flagcdn.com/w320/cl.png",
+    "country": "Chile",
+    "flag":"https://flagcdn.com/w320/cl.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/c52d9059939a1cd4d2348b4d0145bbdb/detailed",
     Sendero: "Dientes de Navarino",
     lat: "-55.010680",
@@ -251,7 +241,7 @@ export const hikingPlaces = [
     Continente: "América del Sur"
   },
   {
-    País: "Nepal",
+    "country": "Nepal",
     Flag:"https://flagcdn.com/w320/np.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/cb7bab6fc7d0849de3d2866a80403c45/detailed",
     Sendero: "Everest Base Camp Trek",
@@ -263,7 +253,7 @@ export const hikingPlaces = [
     Continente: "Asia"
   },
   {
-    País: "Nepal",
+    "country": "Nepal",
     Flag:"https://flagcdn.com/w320/np.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/fb6659384d83d829701fb6cf1d7dafeb/detailed",
     Sendero: "Annapurna Circuit",
@@ -275,7 +265,7 @@ export const hikingPlaces = [
     Continente: "Asia"
   },
   {
-    País: "Japón",
+    "country": "Japón",
     Flag:"https://flagcdn.com/w320/jp.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/bf0a8a4a67554116e4756f9202e02a9b/detailed",
     Sendero: "Kumano Kodo",
@@ -287,7 +277,7 @@ export const hikingPlaces = [
     Continente: "Asia"
   },
   {
-    País: "Japón",
+    "country": "Japón",
     Flag:"https://flagcdn.com/w320/jp.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/ee4fff40717723cbddb6289a71cc56cb/detailed",
     Sendero: "Nakasendo Trail",
@@ -299,7 +289,7 @@ export const hikingPlaces = [
     Continente: "Asia"
   },
   {
-    País: "India",
+    "country": "India",
     Flag:"https://flagcdn.com/w320/in.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/b79854724e596559125a485dbdc38438/detailed",
     Sendero: "Valley of Flowers",
@@ -311,7 +301,7 @@ export const hikingPlaces = [
     Continente: "Asia"
   },
   {
-    País: "India",
+    "country": "India",
     Flag:"https://flagcdn.com/w320/in.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/92bcb33fbc21ea019f3e7568616b808b/detailed",
     Sendero: "Markha Valley Trek",
@@ -323,7 +313,7 @@ export const hikingPlaces = [
     Continente: "Asia"
   },
   {
-    País: "Tanzania",
+    "country": "Tanzania",
     Flag:"https://flagcdn.com/w320/es.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/061cf44bd3bc8c6072f30fa852f3dc1e/detailed",
     Sendero: "Monte Kilimanjaro (Ruta Marangu)",
@@ -335,7 +325,7 @@ export const hikingPlaces = [
     Continente: "África"
   },
   {
-    País: "Tanzania",
+    "country": "Tanzania",
     Flag:"https://flagcdn.com/w320/es.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/cabd3155db2492d02d13eae4eef69395/detailed",
     Sendero: "Monte Meru",
@@ -347,7 +337,7 @@ export const hikingPlaces = [
     Continente: "África"
   },
   {
-    País: "Sudáfrica",
+    "country": "Sudáfrica",
     Flag:"https://flagcdn.com/w320/za.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/425a6764342b26ef20309546acc0e032/detailed",
     Sendero: "Drakensberg Traverse",
@@ -359,7 +349,7 @@ export const hikingPlaces = [
     Continente: "África"
   },
   {
-    País: "Sudáfrica",
+    "country": "Sudáfrica",
     Flag:"https://flagcdn.com/w320/za.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938243/aGlraW5nLWFwcC8zMS5fVHNpdHNpa2FtbWFfZm96bjNr/drilldown",
     Sendero: "Otter Trail",
@@ -371,7 +361,7 @@ export const hikingPlaces = [
     Continente: "África"
   },
   {
-    País: "Marruecos",
+    "country": "Marruecos",
     Flag:"https://flagcdn.com/w320/ma.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/media_explorer_thumbnails/7c5afd7f6acae7d58527d577499a8515/detailed",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
     Sendero: "Toubkal Circuit",
@@ -383,7 +373,7 @@ export const hikingPlaces = [
     Continente: "África"
   },
   {
-    País: "Marruecos",
+    "country": "Marruecos",
     Flag:"https://flagcdn.com/w320/ma.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668322/amJsdWhwdnJsOW5qc25obWg5N3M=/drilldown",
     Sendero: "Valle de Ourika",
@@ -395,7 +385,7 @@ export const hikingPlaces = [
     Continente: "África"
   },
   {
-    País: "Australia",
+    "country": "Australia",
     Flag:"https://flagcdn.com/w320/au.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668322/dXltMmx2dTN2Nmt4bnI1N214YjM=/drilldown",
     Sendero: "Overland Track",
@@ -407,7 +397,7 @@ export const hikingPlaces = [
     Continente: "Oceanía"
   },
   {
-    País: "Australia",
+    "country": "Australia",
     Flag:"https://flagcdn.com/w320/au.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/ZXFmZjZvcnRobWFzY3J3ZnFta3E=/drilldown",
     Sendero: "Larapinta Trail",
@@ -419,7 +409,7 @@ export const hikingPlaces = [
     Continente: "Oceanía"
   },
   {
-    País: "Nueva Zelanda",
+    "country": "Nueva Zelanda",
     Flag:"https://flagcdn.com/w320/nz.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/ZnR5dWx3bHJmenF0bGUzZzR2eDU=/drilldown",
     Sendero: "Milford Track",
@@ -431,7 +421,7 @@ export const hikingPlaces = [
     Continente: "Oceanía"
   },
   {
-    País: "Nueva Zelanda",
+    "country": "Nueva Zelanda",
     Flag:"https://flagcdn.com/w320/nz.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/czM0bndkc3BmYnh5ZWJmdHIyeGE=/drilldown",
     Sendero: "Tongariro Alpine Crossing",
@@ -443,7 +433,7 @@ export const hikingPlaces = [
     Continente: "Oceanía"
   },
   {
-    País: "Nueva Zelanda",
+    "country": "Nueva Zelanda",
     Flag:"https://flagcdn.com/w320/nz.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/bGV2bjZiYnJpaGVqYmQ1d2x4dGc=/drilldown",
     Sendero: "Routeburn Track",
@@ -455,7 +445,7 @@ export const hikingPlaces = [
     Continente: "Oceanía"
   },
   {
-    País: "México",
+    "country": "México",
     Flag:"https://flagcdn.com/w320/mx.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/aTZpOHY3anR0ejk0bzBiMGFwaDQ=/drilldown",
     Sendero: "Pico de Orizaba",
@@ -467,7 +457,7 @@ export const hikingPlaces = [
     Continente: "América del Norte"
   },
   {
-    País: "México",
+    "country": "México",
     Flag:"https://flagcdn.com/w320/mx.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/YmE1YTFiYjBzeXh3eHZ1anF1Ym0=/drilldown",
     Sendero: "Nevado de Toluca",
@@ -479,7 +469,7 @@ export const hikingPlaces = [
     Continente: "América del Norte"
   },
   {
-    País: "Costa Rica",
+    "country": "Costa Rica",
     Flag:"https://flagcdn.com/w320/es.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/dXprZWx6Yno2cG93cnR1ZHZrb3k=/drilldown",
     Sendero: "Cerro Chirripó",
@@ -491,7 +481,7 @@ export const hikingPlaces = [
     Continente: "América Central"
   },
   {
-    País: "Costa Rica",
+    "country": "Costa Rica",
     Flag:"https://flagcdn.com/w320/es.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718668323/aXNhZGE0anlzejcwZmxwc3NubHU=/drilldown",
     Sendero: "Parque Nacional Corcovado",
@@ -623,7 +613,7 @@ export const hikingPlaces = [
     Continente: "Europa"
   },
   {
-    País: "Austria",
+    "country": "Austria",
     Flag:"https://flagcdn.com/w320/at.png",
     Imagen:"https://res-console.cloudinary.com/djsqt7j6v/thumbnails/v1/image/upload/v1718938127/aGlraW5nLWFwcC81My5fQWxwZV9BZHJpYV9UcmFpbF9lcTZkcmY=/drilldown",
     Sendero: "Alpe Adria Trail",
