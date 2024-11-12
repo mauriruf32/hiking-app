@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { useAuth } from '../../Context/AuthContext';
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import styles from "./Registration.module.css"
+import styles from "./Registration.module.css";
+import logo from "../../utils/LOGO.png";
 
 const Registration = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -19,7 +20,13 @@ const Registration = () => {
         }); 
         
   return (
-    <div className={styles.formcontainer} >
+    <div>
+ <div className={styles.formRow}> 
+          <div className={styles.formColumn1}>
+       <img src={logo}  style={{ width: "400px", height: "400px"}}/>
+
+       </div>
+    <div className={styles.formColumn2} >
         {
             RegisterErrors.map((error, i) => (
                 <div className={styles.errors} key={i}>
@@ -28,7 +35,7 @@ const Registration = () => {
             ))
         }
 <h1>REGISTRATE</h1>
-        <form className={styles.form} onSubmit={onSubmit}>
+        <form  onSubmit={onSubmit}>
             <h6>Nombre</h6>
 
             <input className={styles.inputs} type="text" {...register("firstName", {required: true})} placeholder='Name' />
@@ -52,6 +59,10 @@ const Registration = () => {
         </Link>
 
     </div>
+    </div>
+    </div>
+   
+
   )
 }
 

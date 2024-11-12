@@ -9,19 +9,43 @@
     color: #000;
 }
 
+.formRow {
+    margin-top: -15%;
+    padding: 20%;
+  display: flex;
+  flex-direction: row;
+  }
+  
+  .formColumn1 {
+    width: 400px;
+    height: 400px;
+  flex-direction: column;
+  background: #FFFFFF;
+  opacity: 0.5;
+  }
+  .formColumn2 {
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+  background: #ffffff;
+  padding: 50px;
+    }
+
+
 .form {
     display: grid;
 
 }
 
-.form button {
+/* .form button {
     height: 30px;
     width: 35%;
     text-align: center;
     border-radius: 10%;
     color: #000;
     background-color: aqua;
-}
+} */
+ 
 
 .inputs {
     margin: 5px 0 5px ;

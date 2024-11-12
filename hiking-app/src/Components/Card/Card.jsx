@@ -6,10 +6,6 @@ import ReactCardFlip from 'react-card-flip';
 import { TfiMapAlt } from "react-icons/tfi";
 import { BsInfoSquare } from "react-icons/bs";
 
-
-
-
-
 import Likes from "../Comments/Likes";
 
 const Card = ({ hiking }) => {

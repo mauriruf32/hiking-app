@@ -1,32 +1,78 @@
-.formcontainer {
-  padding: 0 0 0 80px;
-  background-color: #ffffffd3;
-  height: 300px;
+/* .formcontainer {
+
   width: 400px;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
-  color: #000;
+  height: 400px;
+  display: block;
+  background: #FFFFFF;
+  
+} */
+
+/* Sign Up */
+
+/* Sign Up */
+
+/* Rectangle 9636 */
+.formRow {
+  margin-top: -15%;
+  padding: 20%;
+display: flex;
+flex-direction: row;
 }
+
+.formColumn1 {
+  width: 400px;
+  height: 400px;
+flex-direction: column;
+background: #FFFFFF;
+opacity: 0.5;
+}
+.formColumn2 {
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+background: #ffffff;
+padding: 50px;
+  }
+
 
 .form {
-  display: grid;
-
+  position: absolute;
+  width: 811px;
+  height: 1080px;
+  left: 1109px;
+  top: 0px;
+  
+  background: #FFFFFF;
+  
 }
 
-.form button {
+
+
+.formRow button {
   height: 30px;
   width: 35%;
   text-align: center;
   border-radius: 10%;
   color: #000;
-  background-color: aqua;
+  background-color: #E79645;
 }
+
+
 
 .inputs {
   margin: 5px 0 5px 0;
   
+}
+
+.Logo {
+  /* Rectangle */
+
+position: absolute;
+
+
+
+opacity: 0.1;
+
 }
 
 p {
@@ -36,4 +82,3 @@ p {
   color: red;
 }
   
-
