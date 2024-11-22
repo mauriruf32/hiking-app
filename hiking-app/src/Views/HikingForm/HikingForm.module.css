@@ -8,40 +8,189 @@
     justify-content: center; */
     /* form bg */
 
-position: absolute;
-width: 760px;
-height: 1200px;
-left: 420px;
-top: 0px;
 
-/* W Background */
+width: 80%;
+height: 800px;
+flex-direction: row;
 background: #FFFFFF;
+justify-self: center;
+justify-content: center;
+}
+
+.formbutton {
+/* Buttons */
+/* Auto layout */
+color: #485a68;
+width: 172px;
+height: 56px;
+/* Keatext purple */
+background: #E79645;
+border-radius: 8px;
+justify-self: center;
+/* Inside auto layout */
+margin:  20%;
+
+}
+.formbutton button {
+
+  color: #485a68;
+width: 172px;
+height: 56px;
+/* Keatext purple */
+background: #E79645;
+border-radius: 8px;
+justify-self: center;
+  }
+
+/* Dropdown Title */
+
+
+.formdropdowns {
+
+/* Dropdowns */
+
+box-sizing: border-box;
+
+position: relative;
+width: 408px;
+height: 254px;
+
+border: 1px dashed #E79645;
+border-radius: 5px;
 
 
 }
-/* 
-.forminputs {
 
-} */
+/* Property 1=Dropdown | Regular */
 
-.formdropdown {
-    /* Property 1=Dropdown | Regular */
+/* Auto layout */
+
+.formdropdown1 {
+
+  color: #485a68;
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px;
+gap: 10px;
+
+width: 368px;
+height: 40px;
+
+/* W Background */
+background: #FFFFFF;
+/* Keatext purple */
+border: 2px solid #E79645;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+  
+  }
+
+
+  /* Input field */
+
+/* Auto layout */
+
+
+
+.inputimg {
+color: #098ff7;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 5px;
+gap: 10px;
+
+width: 368px;
+height: 40px;
+
+/* W Background */
+background: #FFFFFF;
+/* Keatext purple */
+border: 2px solid #E79645;
+border-radius: 8px;
+color: #485a68;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+
+
+h3 {
+  color: #485a68;
+    justify-self: center;
+}
+
+h5 {
+  color: #485a68;
+
+}
+
+
+.formRow {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  }
+  
+  .formColumn1 {
+    width: 400px;
+    height: 400px;
+  flex-direction: column;
+  background: #FFFFFF;
+  margin-top: 20px;
+
+  }
+  .formColumn2 {
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+  background: #ffffff;
+  padding: 20px;
+    }
+
+
+.input {
+    /* padding: 5px 0 5px 0;
+    background: rgba(128, 128, 128, 0.548);
+    width: 100%;
+    color: rgb(0, 0, 0);
+    margin: 10px; */
+
+    /* Input field */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 8px;
+padding: 16px;
+gap: 10px;
 
+width: 368px;
+height: 40px;
 
+/* W Background */
+background: #FFFFFF;
+/* Keatext purple */
+border: 2px solid #E79645;
+border-radius: 8px;
+color: #485a68;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
 
 }
 
-.input {
-    padding: 5px 0 5px 0;
-    background: rgba(128, 128, 128, 0.548);
-    width: 100%;
-    color: rgb(0, 0, 0);
-    margin: 10px;
-}
+
+

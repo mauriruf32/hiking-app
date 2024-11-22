@@ -119,64 +119,49 @@ function HikingForm() {
     };
 
     return (
-        <div className={styles.formcontainer}>
-            <form className={styles.forminputs} onSubmit={onSubmit}>
+        <div >
+            <form className={styles.formcontainer} onSubmit={onSubmit}>
+             <h3>CREAR HIKINGPLACE</h3>
+                
+             <div className={styles.formRow}>
+                <div className={styles.formColumn1}>
+                    <h5>Nombre</h5>
                 <input
                     className={styles.input}
                     type='text'
-                    placeholder='Name'
+                    placeholder='Nombre'
                     {...register("name")}
                     autoFocus
                 />
-                <input
-                    className={styles.input}
-                    type='file'
-                    accept="image/*"
-                    onChange={uploadImage}
-                />
-                <img src={file} alt='' />
-                {loading && <p>Uploading image...</p>}
-
-            
-
+                    <h5>Duracion en horas</h5>
                 <input
                     className={styles.input}
                     type='text'
-                    placeholder='Duration'
+                    placeholder='Duracion en horas'
                     {...register("duration", {
                         required: true,
                         validate: validateNumber
                     })}
                 />
+                    <h5>Ciudad</h5>
                 <input
                     className={styles.input}
                     type='text'
-                    placeholder='Latitude'
-                    {...register("lat", { required: true, validate: validateNumber })}
-                />
-                <input
-                    className={styles.input}
-                    type='text'
-                    placeholder='Longitude'
-                    {...register("lng", { required: true, validate: validateNumber })}
-                />
-                <input
-                    className={styles.input}
-                    type='text'
-                    placeholder='Continent'
+                    placeholder='Ciudad'
                     {...register("continent")}
                     required
                 />
-                <div className={styles.formdropdown}>
-                    <select {...register("difficulty")} required>
+                <div >
+                    <h5>Dificultad</h5>
+                    <select className={styles.formdropdown1} {...register("difficulty")} required>
                         <option value="">Select Difficulty</option>
                         <option value="Facil">Facil</option>
                         <option value="Moderado">Moderado</option>
                         <option value="Dificil">Dificil</option>
                         <option value="Muy Dificil">Muy Dificil</option>
                     </select>
-
-                    <select {...register("country")} required onChange={handleCountryChange}>
+                    <h5>Pais</h5>
+                    <select className={styles.formdropdown1} {...register("country")} required onChange={handleCountryChange}>
                         <option value="">Select Country</option>
                         {countries.map(country => (
                             <option key={country.id} value={country.name}>
@@ -185,12 +170,37 @@ function HikingForm() {
                         ))}
                     </select>
                 </div>
-
-                <MapContainer center={coordinates} zoom={13} style={{ height: "400px", width: "500px" }}>
+                <h5>Latitud</h5>
+                <input
+                    className={styles.input}
+                    type='text'
+                    placeholder='Latitude'
+                    {...register("lat", { required: true, validate: validateNumber })}
+                />
+                    <h5>Longitud</h5>
+                <input
+                    className={styles.input}
+                    type='text'
+                    placeholder='Longitude'
+                    {...register("lng", { required: true, validate: validateNumber })}
+                />
+                </div>
+               
+                <div className={styles.formColumn2}>
+                <h5>Imagen</h5>
+                <img src={file} alt='' style={{ height: "200px", width: "350px" }}/>
+                <input
+                    className={styles.inputimg}
+                    type='file'
+                    accept="image/*"
+                    onChange={uploadImage}
+                />
+                
+                {loading && <p>Uploading image...</p>}
+                <h5>Clickea en el mapa para acceder a las coordenadas si las necesitas</h5>
+                <MapContainer center={coordinates} zoom={13} style={{ height: "250px", width: "350px" }}>
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                     <MapEventsHandler handleMapClick={handleMapClick} />
-                    
-                    {/* Si hay coordenadas, mostramos el marcador con el Popup */}
                     {popupCoordinates && (
                         <Marker position={[popupCoordinates.lat, popupCoordinates.lng]} icon={newicon}>
                             <Popup>
@@ -202,9 +212,15 @@ function HikingForm() {
                     )}
                 </MapContainer>
 
-                <button type='submit'>
+                </div>
+
+                </div>
+                               <div className={styles.formbutton}   >
+                               <button type='submit'>
                     Crear
                 </button>
+                               </div>
+
             </form>
         </div>
     );
