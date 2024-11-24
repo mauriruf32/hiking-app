@@ -22,7 +22,7 @@ const toggleLike = () => {
     <div className='card card-dark m-auto'
     style={{width: 300, cursor:"pointer"}}>
     <div className='card-header fs-xl'>
-      <AiFillSmile />
+      {/* <AiFillSmile /> */}
       <small>HikingPlace</small>
     </div>
     <img src={hiking.image} alt="img" style={{ height:

@@ -14,8 +14,8 @@ const Profile = () => {
  }, []);
 
     return (
-        <div className='profile'>
-            <div className='profile-info'>
+        <div >
+            <div className={style.perfilcontainer}>
                 <p>Name: {user.firstName}</p>
                 <p>Email: {user.email}</p>
                 <p>Email: {user.id}</p>

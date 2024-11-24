@@ -1,26 +1,47 @@
 import React from 'react';
-import style from "./Cards.module.css";
 import { useHikings } from '../../Context/HikingContext';
 import { useAuth } from '../../Context/AuthContext';
-import CardProfile from './CardProfile'; // Asegúrate de importar el componente CardProfile
+import style from "./ProfileHikings.module.css";
+import CardProfile from './CardProfile'; 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const ProfileHikings = () => {
-  const { hinkings } = useHikings(); // Asume que tienes una lista de hikings en el contexto
+  const { hinkings } = useHikings(); 
   const { user } = useAuth();
 
-  // Filtrar hikings por userId
   const userHikings = hinkings.filter(hiking => hiking.userId === user.id);
 
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div>
-      {userHikings.length > 0 ? (
+    <div className={style.perfilcontainer} >
+          <div className={style.userinfo}>
+            <p>Name: {user.firstName}</p>
+            <p>Email: {user.email}</p>
+            <p>Email: {user.id}</p>
+          </div> 
+         <div className={style.usercards}>
+          <Slider {...settings}>
+          {userHikings.length > 0 ? (
         userHikings.map(hiking => (
           <CardProfile key={hiking.id} hiking={hiking} />
         ))
       ) : (
         <p>Aun no has creado nigun sendero.</p>
       )}
+          </Slider>
+      
     </div>
+    </div>
+    
   );
 };
 
