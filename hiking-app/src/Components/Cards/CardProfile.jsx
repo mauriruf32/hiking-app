@@ -22,13 +22,13 @@ const CardProfile = ({ hiking }) => {
   const { deleteHiking } = useHikings();
 
   return (
-    <div className='container '>
+    <div >
       <div >
         <div >
           <small>HikingPlace</small>
         </div>
-        <div className="polaroid-image">
-          <img src={hiking.image} alt="img" style={{ width: "200px", height: "150px" }} />
+        <div >
+          <img src={hiking.image} alt="img" style={{ width: "150px", height: "150px" }} />
         </div>
         <div >
           {/* <p >{hiking.name}</p>
@@ -42,10 +42,10 @@ const CardProfile = ({ hiking }) => {
           <AiOutlineComment /> {" "}
           {like ? <AiFillHeart className='text-danger' onClick={toggleLike} /> : <AiOutlineHeart onClick={toggleLike} />} {count}
         </div> */}
-        <div >
+        {/* <div >
           <button onClick={() => deleteHiking(hiking.id)}>Delete</button>
           <button>Edit</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
