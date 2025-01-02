@@ -17,8 +17,9 @@ const Profile = () => {
         <div >
             <div className={style.perfilcontainer}>
                 <p>Name: {user.firstName}</p>
+                <p>LastName: {user.firstName}</p>
                 <p>Email: {user.email}</p>
-                <p>Email: {user.id}</p>
+                <p>Id: {user.id}</p>
             </div>
             <div className={style.cardscontainer}>
                 {hinkings?.map((hiking) => (

@@ -67,6 +67,9 @@ const login = async (req, res) => {
         res.json({
             id: userFound.id,
             firstName: userFound.firstName,
+            lastName: userFound.lastName,
+            birthDate: userFound.birthDate,
+            phoneNumber: userFound.phoneNumber,
             email: userFound.email,
             createdAt: userFound.createdAt,
             updatedAt: userFound.updatedAt,
@@ -85,6 +88,49 @@ const logout = async (req, res) => {
          return res.sendStatus(200);
 };
 
+const getUsers = async (req, res) => {
+    const users = await User.findAll();
+    res.json(users);
+};
+
+// const updateProfile = async (req, res) => {
+//     const users = await User.findAll();
+//     res.json(users);
+// };
+
+const updateProfile = async (req, res) => {
+    const {firstName, lastName, birthDate, phoneNumber, email, password} = req.body;
+
+    //     const hikingPlace = await HikingPlace.update(req.params.id, req.body, {
+    //     new: true,
+    // });
+ 
+
+  try {
+    const userFound = await User.findByPk(req.params.id, req.body);
+
+    if (!userFound) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    userFound.firstName = firstName;
+    // userFound.image = image;
+    userFound.lastName = lastName;
+    userFound.birthDate = birthDate;
+    userFound.phoneNumber = phoneNumber;
+    userFound.email = email;
+    userFound.password = password;
+
+    await userFound.save();
+
+    res.json(userFound);
+  } catch (error) {
+    console.error("Error updating hikingplace:", error);
+    res.status(500).json({ error: "Error updating your hikingplace" });
+  }
+};
+
+
 const profile = async (req, res) => {
     const userFound = await User.findByPk(req.user.id);
 
@@ -93,6 +139,9 @@ const profile = async (req, res) => {
     return res.json({
         id: userFound.id,
         firstName: userFound.firstName,
+        lastName: userFound.lastName,
+        birthDate: userFound.birthDate,
+        phoneNumber: userFound.phoneNumber,
         email: userFound.email,
     });
 };
@@ -177,6 +226,15 @@ const hikingPlaceLikes = async (req, res) => {
     res.json(likes);
  };
 
+ const getUserLikes = async (req, res) => {
+    const { id } = req.params; 
+    const likes = await Like.findAll({
+        where:{ userId: id } ,
+    });
+    res.json(likes);
+ };
+ 
+
 const verifyToken = async (req, res) => {
     const {token} = req.cookies;
 
@@ -191,6 +249,9 @@ const verifyToken = async (req, res) => {
         return res.json({
             id: userFound.id,
             firstName: userFound.firstName,
+            lastName: userFound.lastName,
+            birthDate: userFound.birthDate,
+            phoneNumber: userFound.phoneNumber,
             email: userFound.email,
         });
     });
@@ -212,4 +273,7 @@ module.exports = {
     hikingPlaceLikes,
     getLike,
     deleteLike,
+    getUserLikes,
+    getUsers,
+    updateProfile,
 };

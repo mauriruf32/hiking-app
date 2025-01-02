@@ -1,6 +1,7 @@
 
 import { useHikings } from '../../Context/HikingContext';
 import { useAuth } from '../../Context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 // import { AiFillSmile, AiFillHeart, AiOutlineHeart, AiOutlineComment } from "react-icons/ai";
 
@@ -8,6 +9,7 @@ const CardProfile = ({ hiking }) => {
   const { user } = useAuth();
   const [like, setLike] = useState(false);
   const [count, setCount] = useState(0);
+  const navigate = useNavigate();
 
   const toggleLike = () => {
     if (!like) {
@@ -42,10 +44,10 @@ const CardProfile = ({ hiking }) => {
           <AiOutlineComment /> {" "}
           {like ? <AiFillHeart className='text-danger' onClick={toggleLike} /> : <AiOutlineHeart onClick={toggleLike} />} {count}
         </div> */}
-        {/* <div >
+        <div >
           <button onClick={() => deleteHiking(hiking.id)}>Delete</button>
-          <button>Edit</button>
-        </div> */}
+          <button onClick={() =>navigate(`/edit/${hiking.id}`)}>Edit</button>
+        </div>
       </div>
     </div>
   );

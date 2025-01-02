@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import style from "./Home.module.css";
 import Card from '../../Components/Card/Card';
-import FavoriteCard from '../../Components/Card/Favorite';
 import { useHikings } from '../../Context/HikingContext';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 

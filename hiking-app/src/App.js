@@ -12,7 +12,7 @@ import ProtectedRoute from './ProtectedRoute.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import { HikingProvider } from './Context/HikingContext.jsx';
 import ProfileHikings from './Components/Cards/ProfileHikings.jsx';
-import Favorite from './Components/Card/Favorite.jsx';
+import Favorites from './Views/Favorites/Favorites.jsx';
 
 function App() {
   const location = useLocation(); // Obtenemos la ubicación actual
@@ -41,6 +41,8 @@ function App() {
             <Route path="/logout" element={<LogOut />} />
             <Route path="/profile" element={<ProfileHikings />} />
             <Route path="/hikingform" element={<HikingForm />} />
+            <Route path="/edit/:id" element={<HikingForm />} />
+            <Route path="/favorites" element={<Favorites />} />
           </Route>
         </Routes>
       </HikingProvider>

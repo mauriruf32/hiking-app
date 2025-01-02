@@ -44,13 +44,51 @@ const deleteHikingPlace = async (req, res) => {
     res.json(hikingPlace)
 };
 
+// const updateHikingPlace = async (req, res) => {
+//     const hikingPlace = await HikingPlace.update(req.params.id, req.body, {
+//         new: true,
+//     });
+//     if (!hikingPlace) return res.status(404).json({message: "Hiking Place not found"})
+//     res.json(hikingPlace)
+// };
+
+
 const updateHikingPlace = async (req, res) => {
-    const hikingPlace = await HikingPlace.update(req.params.id, req.body, {
-        new: true,
-    });
-    if (!hikingPlace) return res.status(404).json({message: "Hiking Place not found"})
-    res.json(hikingPlace)
+    const { name, image, duration, difficulty, country, flag, continent, lat, lng } = req.body;
+
+    //     const hikingPlace = await HikingPlace.update(req.params.id, req.body, {
+    //     new: true,
+    // });
+ 
+
+  try {
+    const hikingPlace = await HikingPlace.findByPk(req.params.id, req.body);
+
+    if (!hikingPlace) {
+      return res.status(404).json({ error: "Hikingplace not found" });
+    }
+
+    hikingPlace.name = name;
+    hikingPlace.image = image;
+    hikingPlace.duration = duration;
+    hikingPlace.difficulty = difficulty;
+    hikingPlace.country = country;
+    hikingPlace.flag = flag;
+    hikingPlace.continent = continent;
+    hikingPlace.lat = lat;
+    hikingPlace.lng = lng;
+
+
+    await hikingPlace.save();
+
+    res.json(hikingPlace);
+  } catch (error) {
+    console.error("Error updating hikingplace:", error);
+    res.status(500).json({ error: "Error updating your hikingplace" });
+  }
 };
+
+
 
 
 module.exports = {

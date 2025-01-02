@@ -3,16 +3,41 @@ import { useHikings } from '../../Context/HikingContext';
 import { useAuth } from '../../Context/AuthContext';
 import style from "./ProfileHikings.module.css";
 import CardProfile from './CardProfile'; 
+// import FavoriteCard from '../Card/Favorite'; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const ProfileHikings = () => {
   const { hinkings } = useHikings(); 
-  const { user } = useAuth();
+  const { user, likes } = useAuth();
   const [comments, setComments] = useState([]);
 
   const userHikings = hinkings.filter(hiking => hiking.userId === user.id);
+  // const userLikedHikings = likes.filter(like => like.userId === user.id);
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "2d2d26" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
 
   let settings = {
     dots: true,
@@ -20,6 +45,8 @@ const ProfileHikings = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   
   };
 
@@ -53,8 +80,11 @@ const ProfileHikings = () => {
     <div className={style.perfilcontainer} >
           <div className={style.userinfo}>
             <p>Name: {user.firstName}</p>
-            <p>Email: {user.email}</p>
-            <p>Email: {user.id}</p>
+            <p>LastName: {user.lastName}</p>
+            <p>Phone: {user.phoneNumber}</p>
+            <p>birthDAy: {user.birthDate}</p>
+            <p>Ema,il: {user.email}</p>
+            <p>Id: {user.id}</p>
           </div> 
          <div className={style.usercards}>
           <Slider {...settings}>
@@ -66,6 +96,15 @@ const ProfileHikings = () => {
         <p>Aun no has creado nigun sendero.</p>
       )}
           </Slider>
+          {/* <Slider {...settings}>
+          {userLikedHikings.length > 0 ? (
+        userLikedHikings.map(like => (
+          <FavoriteCard key={like.id} like={like} />
+        ))
+      ) : (
+        <p>Aun no has creado nigun sendero.</p>
+      )}
+          </Slider> */}
           <div className={style.usercomments}>
           
           <Slider {...settings2}>

@@ -15,6 +15,9 @@ const {
     hikingPlaceLikes,
     getLike,
     deleteLike,
+    getUserLikes,
+    getUsers,
+    updateProfile,
  } = require ("../controllers/auth.controller.js");
 const { authRequired } = require("../middlewares/validateToken.js");
 const { validateSchema } = require("../middlewares/validator.middleware.js");
@@ -46,7 +49,13 @@ router.get("/likes/:id/hikingplaces", hikingPlaceLikes);
 
 router.delete("/likes/:userId/:hikingId", authRequired, deleteLike);
 
+router.get("/likes/:id/profile", authRequired, getUserLikes);
+
 router.get("/profile", authRequired, profile);
+
+router.put(`/profile/:id`, authRequired, updateProfile);
+
+router.get("/users", authRequired, getUsers);
 
 router.get("/profile/:id/hikingplaces", authRequired, profileHikingPlaces);
 

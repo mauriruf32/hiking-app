@@ -1,5 +1,12 @@
 import { createContext, useContext, useState } from "react";
-import { createHikingRequest, getHikingsRequest, deleteHikingsRequest, getHikingByNameRequest, getHikingRequest } from "../api/hikings";
+import { 
+    createHikingRequest, 
+    getHikingsRequest, 
+    deleteHikingsRequest, 
+    getHikingByNameRequest, 
+    getHikingRequest, 
+    updateHikingRequest, 
+} from "../api/hikings";
 
 const HikingContext = createContext();
 
@@ -55,7 +62,8 @@ export function HikingProvider({ children }) {
         const res = await getHikingByNameRequest(name); 
         if (res.status = 200) setHikings(hinkings.filter(hiking => hiking.name.toLowerCase().includes(name.toLowerCase())));
     };
-    
+
+ 
  
 
     return (

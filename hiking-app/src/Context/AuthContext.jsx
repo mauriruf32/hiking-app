@@ -10,6 +10,7 @@ import {
     deleteLikeRequest,
     getLikesRequest,
     getLikeByIdRequest,
+    getUserLikesRequest,
 } from "../api/auth";
 import Cookies  from "js-cookie";
 
@@ -130,6 +131,17 @@ const deleteLike = async (userId, hikingId) => {
     }
 };
 
+const getUserLikes = async (userId) => {
+    try {
+        const res = await getUserLikesRequest(userId);
+        if (res.status === 204) {
+            setLikes(likes.filter(like => like.userId !== userId));
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 const logout = () => {
     Cookies.remove("token");
     setIsAuthenticated(false);
@@ -197,6 +209,7 @@ useEffect(() => {
             getLikes,
             getLikeById,
             deleteLike,
+            getUserLikes,
         }}>
             {children}
         </AuthContext.Provider>

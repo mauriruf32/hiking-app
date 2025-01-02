@@ -26,6 +26,9 @@ function NavBar() {
           <Link to="/hikingform">Add Hiking Place</Link>
         </li>
         <li>
+          <Link to="/favorites">favorite</Link>
+        </li>
+        <li>
           <Link to="/" onClick={()=>{
             logout()
           }}>LogOut</Link>

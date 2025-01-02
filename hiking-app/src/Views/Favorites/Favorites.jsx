@@ -1,61 +1,33 @@
-import React, { useEffect } from "react";
-import { useH } from "../../redux/actions";
-import Card from "../../Components/Card/Card";
-// import styles from "./Favorites.module.css"; // Verifica si realmente necesitas esto
 
-function Favorites({ favoritePlaces }) {
-  const dispatch = useDispatch();
+import React from 'react';
+import FavoriteCard from '../../Components/Card/FavoriteCard';
+import { useHikings } from '../../Context/HikingContext';
+import { useAuth } from '../../Context/AuthContext';
+import styles from "./Favorites.module.css"
 
-  useEffect(() => {
-    dispatch(getFav());
-  }, [dispatch]); // Agrega dispatch como dependencia
+const Favorites  = () => {
+    const { user, likes } = useAuth();
+    const { hinkings } = useHikings();
+    const userLikedHikings = hinkings.filter(hiking => hiking.id === likes.hikingId && user.id === likes.userId);
 
-  // const handleOrder = function(evento){
-  //   dispatch(orderCards(evento.target.value))
-  // }
-
-  // const handleFilter = (evento) => {
-  //   dispatch(filterCards(evento.target.value))
-  // }
-
-  return (
-    <div>
-      {/* <div>
-        <select name="order" onChange={handleOrder} >
-          <option value="A">Ascendent</option>
-          <option value="D">Descendent</option>
-        </select>
-        <select name="filter" onChange={handleFilter} >
-          <option value="All">All</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Genderless">Genderless</option>
-          <option value="unknown">unknown</option>
-        </select>
-      </div> */}
-      <div>
-        {favoritePlaces?.map(({ Sendero, Imagen, Flag, lat, lng, País, Dificultad, Región, Continente }) => (
-          <Card
-            key={Sendero}
-            Sendero={Sendero}
-            lat={lat}
-            lng={lng}
-            Dificultad={Dificultad}
-            Continente={Continente}
-            País={País}
-            Región={Región}
-            Imagen={Imagen}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.favoritecontainer} >
+        Name: {user.firstName}
+        ID: {user.id}
+        <div >
+        Favoritos
+        </div>
+        {userLikedHikings.length > 0 ? (
+        userLikedHikings.map(hiking => (
+          <FavoriteCard key={hiking.id} hiking={hiking} />
+        ))
+      ) : (
+        <p>Aun no has likeado nigun sendero.</p>
+      )}
+          <FavoriteCard />
+        
+        </div>
+    );
 }
 
-export function mapStateToProps(state) {
-  return {
-    favoritePlaces: state.favoritePlaces
-  };
-}
-
-export default connect(mapStateToProps)(Favorites);
+export default Favorites;

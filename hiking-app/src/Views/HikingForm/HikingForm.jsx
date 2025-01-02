@@ -26,7 +26,7 @@ function HikingForm() {
     const [popupCoordinates, setPopupCoordinates] = useState(null); // Estado para las coordenadas del Popup
 
     const { register, handleSubmit, setValue, setError } = useForm();
-    const { createHiking } = useHikings();
+    const { createHiking, getHikingPlaceById } = useHikings();
     const { user } = useAuth();
     const navigate = useNavigate();
     const [file, setFile] = useState();
