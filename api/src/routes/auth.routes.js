@@ -18,7 +18,7 @@ const {
     getUserLikes,
     getUsers,
     updateProfile,
- } = require ("../controllers/auth.controller.js");
+ } = require ("../controllers/auth.controller.js"); //Controllers
 const { authRequired } = require("../middlewares/validateToken.js");
 const { validateSchema } = require("../middlewares/validator.middleware.js");
 const  { registerSchema, loginSchema } = require( "../auth.schema.js");
