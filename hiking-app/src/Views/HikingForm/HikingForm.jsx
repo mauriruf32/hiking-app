@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useHikings } from '../../Context/HikingContext';
 import { useAuth } from '../../Context/AuthContext';
 import styles from "./HikingForm.module.css";
@@ -26,10 +26,11 @@ function HikingForm() {
     const [popupCoordinates, setPopupCoordinates] = useState(null); // Estado para las coordenadas del Popup
 
     const { register, handleSubmit, setValue, setError } = useForm();
-    const { createHiking, getHikingPlaceById } = useHikings();
+    const { createHiking, getHikingPlaceById, updateHikingPlace } = useHikings();
     const { user } = useAuth();
     const navigate = useNavigate();
     const [file, setFile] = useState();
+    const params = useParams();
 
 
     const fetchCountries = async () => {
@@ -52,12 +53,17 @@ function HikingForm() {
     }, []);
 
     const onSubmit = handleSubmit((data) => {
-        const hikingData = { ...data, userId: user.id, flag: selectedFlag };
-        createHiking(hikingData);
+        if (params.id) {
+            updateHikingPlace(params.id, data);
+        } else {
+            const hikingData = { ...data, userId: user.id, flag: selectedFlag };
+            createHiking(hikingData);
+    
+            // Actualizar las coordenadas con los valores de latitud y longitud
+            setCoordinates([parseFloat(data.lat), parseFloat(data.lng)]);
+        }
         navigate('/home');
 
-        // Actualizar las coordenadas con los valores de latitud y longitud
-        setCoordinates([parseFloat(data.lat), parseFloat(data.lng)]);
     });
 
     const validateNumber = (value) => {
@@ -118,10 +124,26 @@ function HikingForm() {
         return null;
     };
 
+    useEffect(() => {
+        async function loadHiking() {
+        if (params.id) {
+         const place = await getHikingPlaceById(params.id);
+          setValue('name', place.name)
+          setValue('duration', place.duration)
+          setValue('continent', place.continent)
+          setValue('difficulty', place.difficulty)
+          setValue('lat', place.lat)
+          setValue('lng', place.lng)
+          setValue('image', place.image)
+        }
+      }
+      loadHiking()
+    }, []);
+
     return (
         <div >
             <form className={styles.formcontainer} onSubmit={onSubmit}>
-             <h3>CREAR HIKINGPLACE</h3>
+             <h3>{params.id ? "Editar Hiking Place" : "Crear Hiking Plaace"}</h3>
                 
              <div className={styles.formRow}>
                 <div className={styles.formColumn1}>
@@ -217,7 +239,7 @@ function HikingForm() {
                 </div>
                                <div className={styles.formbutton}   >
                                <button type='submit'>
-                    Crear
+                    Guardar
                 </button>
                                </div>
 

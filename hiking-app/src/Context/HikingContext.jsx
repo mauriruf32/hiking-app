@@ -35,7 +35,7 @@ export function HikingProvider({ children }) {
     const getHikingPlaceById = async (id) => {
         try {
             const res = await getHikingRequest(id);
-            setHikings(res.data.data);
+            return res.data;
         } catch (error) {
             console.error(error);
         }
@@ -63,7 +63,13 @@ export function HikingProvider({ children }) {
         if (res.status = 200) setHikings(hinkings.filter(hiking => hiking.name.toLowerCase().includes(name.toLowerCase())));
     };
 
- 
+    const updateHikingPlace = async (id, hiking) => {
+         try {
+            await updateHikingRequest(id, hiking);
+         } catch (error) {
+            console.log(error);
+         }
+    }
  
 
     return (
@@ -75,6 +81,7 @@ export function HikingProvider({ children }) {
             deleteHiking,
             getHikingByName,
             getHikingPlaceById,
+            updateHikingPlace,
         }}
         >
             {children}

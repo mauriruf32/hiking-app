@@ -8,6 +8,6 @@ export const getHikingByNameRequest = name => axios.get(`/hikingplaces/?name=${n
 
 export const createHikingRequest = hiking => axios.post(`/hikingplaces`, hiking);
 
-export const updateHikingRequest = (hiking) => axios.put(`/hikingplaces/${hiking.id}`, hiking);
+export const updateHikingRequest = (id, hiking) => axios.put(`/hikingplaces/${id}`, hiking);
 
 export const deleteHikingsRequest = id => axios.delete(`/hikingplaces/${id}`);
