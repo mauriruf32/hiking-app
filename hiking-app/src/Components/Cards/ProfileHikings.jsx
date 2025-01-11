@@ -7,11 +7,13 @@ import CardProfile from './CardProfile';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useNavigate } from 'react-router-dom';
 
 const ProfileHikings = () => {
   const { hinkings } = useHikings(); 
   const { user, likes } = useAuth();
   const [comments, setComments] = useState([]);
+  const navigate = useNavigate();
 
   const userHikings = hinkings.filter(hiking => hiking.userId === user.id);
   // const userLikedHikings = likes.filter(like => like.userId === user.id);
@@ -85,7 +87,9 @@ const ProfileHikings = () => {
             <p>birthDAy: {user.birthDate}</p>
             <p>Ema,il: {user.email}</p>
             <p>Id: {user.id}</p>
+            <button onClick={() =>navigate(`/profile/${user.id}`)}>Edit</button>
           </div> 
+
          <div className={style.usercards}>
           <Slider {...settings}>
           {userHikings.length > 0 ? (

@@ -11,6 +11,8 @@ import {
     getLikesRequest,
     getLikeByIdRequest,
     getUserLikesRequest,
+    getUserProfileRequest,
+    updateUserProfileRequest,
 } from "../api/auth";
 import Cookies  from "js-cookie";
 
@@ -142,6 +144,24 @@ const getUserLikes = async (userId) => {
     }
 };
 
+const getUserProfile = async () => {
+    try {
+        const res = await getUserProfileRequest();
+        return res.data;
+    } catch (error) {
+        console.error(error);
+    }
+    
+};
+
+const updateUserProfile = async (id, user) => {
+    try {
+       await updateUserProfileRequest(id, user);
+    } catch (error) {
+       console.log(error);
+    }
+};
+
 const logout = () => {
     Cookies.remove("token");
     setIsAuthenticated(false);
@@ -210,6 +230,8 @@ useEffect(() => {
             getLikeById,
             deleteLike,
             getUserLikes,
+            getUserProfile,
+            updateUserProfile,
         }}>
             {children}
         </AuthContext.Provider>

@@ -24,6 +24,10 @@ export const deleteLikeRequest = (userId, hikingId) => axios.delete(`/likes/${us
 
 export const getUserLikesRequest = (userId) => axios.get(`/likes/${userId}/profile`);
 
+export const getUserProfileRequest = () => axios.get(`/profile`);
+
+export const updateUserProfileRequest = (id, user) => axios.put(`/profile/${id}`, user);
+
 // export const logoutRequest = () => axios.get(`/verify`);
 
 
