@@ -81,6 +81,7 @@ const ProfileHikings = () => {
   return (
     <div className={style.perfilcontainer} >
           <div className={style.userinfo}>
+          <img src={user.image} alt="imagen" style={{ width: "150px", height: "150px", borderRadius:"100px"}} />
             <p>Name: {user.firstName}</p>
             <p>LastName: {user.lastName}</p>
             <p>Phone: {user.phoneNumber}</p>

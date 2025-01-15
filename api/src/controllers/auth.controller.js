@@ -9,7 +9,7 @@ const { TOKEN_SECRET }  = require("../config.js");
 // import * as bcrypt from 'bcryptjs';
 
 const register = async (req, res) => {
-    const {firstName, lastName, birthDate, phoneNumber, email, password} = req.body;
+    const {firstName, lastName, birthDate, image, phoneNumber, email, password} = req.body;
 
     try {
 // Corroboramos que el usuario no este registrado
@@ -23,6 +23,7 @@ const register = async (req, res) => {
             firstName,
             lastName,
             birthDate,
+            image,
             phoneNumber,
             email,
             password: passwordHash,
@@ -68,6 +69,7 @@ const login = async (req, res) => {
             id: userFound.id,
             firstName: userFound.firstName,
             lastName: userFound.lastName,
+            image: userFound.image,
             birthDate: userFound.birthDate,
             phoneNumber: userFound.phoneNumber,
             email: userFound.email,
@@ -99,7 +101,7 @@ const getUsers = async (req, res) => {
 // };
 
 const updateProfile = async (req, res) => {
-    const {firstName, lastName, birthDate, phoneNumber, email, password} = req.body;
+    const {firstName, image, lastName, birthDate, phoneNumber, email, password} = req.body;
 
     //     const hikingPlace = await HikingPlace.update(req.params.id, req.body, {
     //     new: true,
@@ -114,7 +116,7 @@ const updateProfile = async (req, res) => {
     }
 
     userFound.firstName = firstName;
-    // userFound.image = image;
+    userFound.image = image;
     userFound.lastName = lastName;
     userFound.birthDate = birthDate;
     userFound.phoneNumber = phoneNumber;
@@ -140,6 +142,7 @@ const profile = async (req, res) => {
         id: userFound.id,
         firstName: userFound.firstName,
         lastName: userFound.lastName,
+        image: userFound.image,
         birthDate: userFound.birthDate,
         phoneNumber: userFound.phoneNumber,
         email: userFound.email,
@@ -250,6 +253,7 @@ const verifyToken = async (req, res) => {
             id: userFound.id,
             firstName: userFound.firstName,
             lastName: userFound.lastName,
+            image: userFound.image,
             birthDate: userFound.birthDate,
             phoneNumber: userFound.phoneNumber,
             email: userFound.email,

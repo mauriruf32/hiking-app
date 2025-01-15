@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { useAuth } from '../../Context/AuthContext';
-import { useParams } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./ProfileForm.module.css";
 
 
@@ -10,12 +9,13 @@ const ProfileForm = () => {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const { getUserProfile, errors: RegisterErrors, updateUserProfile  } = useAuth();
     const params = useParams();
+    const navigate = useNavigate();
 
         const onSubmit = handleSubmit((data) => {
             if (params.id) {
                 updateUserProfile(params.id, data);
-            }           
-    
+            };
+            navigate("/profile")
         });
 
         useEffect(() => {
@@ -46,7 +46,7 @@ const ProfileForm = () => {
                 </div>
             ))
         }
-<h1>REGISTRATE</h1>
+            <h1>Editar datos</h1>
         <form  onSubmit={onSubmit}>
             <h6>Nombre</h6>
 
@@ -71,7 +71,7 @@ const ProfileForm = () => {
             {/* <h6>Password</h6>
             <input className={styles.inputs} type="password" {...register("password", {required: true})} placeholder='Password' />
             {errors.password && (<p>Password is required</p> )} */}
-            
+            <br/>
             <button type='submit'>
                <p>Guardar</p>
             </button>
