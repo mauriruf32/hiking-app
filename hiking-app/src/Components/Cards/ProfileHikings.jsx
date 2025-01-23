@@ -1,15 +1,3 @@
-
-// import React, { useEffect, useState } from 'react';
-// import { useHikings } from '../../Context/HikingContext';
-// import { useAuth } from '../../Context/AuthContext';
-// import style from "./ProfileHikings.module.css";
-// import CardProfile from './CardProfile'; 
-// import Cloudinary from './CloudImageUploader.jsx'; 
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
-// import { useNavigate, useParams } from 'react-router-dom';
-// import { useForm } from 'react-hook-form';
 import React, { useEffect, useState } from 'react';
 import { useHikings } from '../../Context/HikingContext';
 import { useAuth } from '../../Context/AuthContext';
@@ -20,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useNavigate, useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { IoIosCamera } from "react-icons/io";
 
 const ProfileHikings = () => {
   const { hinkings } = useHikings(); 
@@ -95,7 +84,10 @@ const ProfileHikings = () => {
       <div className={style.userinfo}>
         <img src={user.image} alt="imagen" style={{ width: "150px", height: "150px", borderRadius:"100px"}} />
         <form>
-          <input type="file" placeholder="Subir imagen a Cloudinary" onChange={uploadImage} />
+          <label htmlFor="fileInput" className={style.cameraIcon}>
+            <IoIosCamera size={30} />
+          </label>
+          <input id="fileInput" type="file" placeholder="Subir imagen a Cloudinary" onChange={uploadImage} style={{ display: 'none' }} />
           {loading ? (<h3>Cargando Imagenes...</h3>) : (<img src="" alt="" />)}
         </form>
         <p>Name: {user.firstName}</p>
@@ -136,6 +128,17 @@ const ProfileHikings = () => {
 export default ProfileHikings;
 
 
+// import React, { useEffect, useState } from 'react';
+// import { useHikings } from '../../Context/HikingContext';
+// import { useAuth } from '../../Context/AuthContext';
+// import style from "./ProfileHikings.module.css";
+// import CardProfile from './CardProfile'; 
+// import Cloudinary from './CloudImageUploader.jsx'; 
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import { useNavigate, useParams } from 'react-router-dom';
+// import { useForm } from 'react-hook-form';
 // const ProfileHikings = () => {
 //   const { hinkings } = useHikings(); 
 //   const { user,  updateUserProfile  } = useAuth();
