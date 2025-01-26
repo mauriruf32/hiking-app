@@ -60,17 +60,44 @@ const ProfileHikings = () => {
     }
   };
 
-  let settings = {
+    function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "2d2d26" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+
+    let settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
+    autoplay: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  
   };
 
   let settings2 = {
     dots: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -79,17 +106,37 @@ const ProfileHikings = () => {
     cssEase: "linear"
   };
 
+  // let settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1
+  // };
+
+  // let settings2 = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   speed: 2000,
+  //   autoplaySpeed: 1000,
+  //   cssEase: "linear"
+  // };
+
   return (
     <div className={style.perfilcontainer} >
-      <div className={style.userinfo}>
-        <img src={user.image} alt="imagen" style={{ width: "150px", height: "150px", borderRadius:"100px"}} />
+      <div className={style.userinfo} >
+        <img src={user.image} alt="imagen"  style={{ width: "250px", height: "250px", borderRadius:"200px", marginLeft:"12%", marginBottom:"5%", marginTop:"-10%"}} />
         <form>
           <label htmlFor="fileInput" className={style.cameraIcon}>
-            <IoIosCamera size={30} />
+            <IoIosCamera size={50} style={{ marginLeft:"200px", marginTop:"-40%"}} />
           </label>
           <input id="fileInput" type="file" placeholder="Subir imagen a Cloudinary" onChange={uploadImage} style={{ display: 'none' }} />
           {loading ? (<h3>Cargando Imagenes...</h3>) : (<img src="" alt="" />)}
         </form>
+        <div className={style.userdatos}>
         <p>Name: {user.firstName}</p>
         <p>LastName: {user.lastName}</p>
         <p>Phone: {user.phoneNumber}</p>
@@ -97,6 +144,8 @@ const ProfileHikings = () => {
         <p>Email: {user.email}</p>
         <p>Id: {user.id}</p>
         <button onClick={() => navigate(`/profile/${user.id}`)}>Edit</button>
+        </div>
+
       </div> 
 
       <div className={style.usercards}>

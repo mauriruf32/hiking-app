@@ -27,7 +27,7 @@ const CardProfile = ({ hiking }) => {
     <div >
       <div >
         <div >
-          <small>HikingPlace</small>
+          <small>{hiking.name}</small>
         </div>
         <div >
           <img src={hiking.image} alt="img" style={{ width: "150px", height: "150px" }} />
