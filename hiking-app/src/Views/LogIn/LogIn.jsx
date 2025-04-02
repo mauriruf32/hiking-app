@@ -24,13 +24,7 @@ const LogIn = () => {
   return (
     <div className={style.formcontainer}>
     <div  className={style.formRow}>
-       {
-        signInErrors.map((error, i) => (
-          <div className={style.errors} key={i}>
-            {error}
-          </div>
-        ))
-       }
+
       <div className={style.formColumn1}>
        <img src={logo} style={{ width: "400px", height: "400px"}}/>
 
@@ -38,12 +32,19 @@ const LogIn = () => {
        <div className={style.formColumn2}>
        <form  onSubmit={onSubmit}>
       <h1>Log In</h1>
+      {
+        signInErrors.map((error, i) => (
+          <div className={style.errors} key={i}>
+            {error}
+          </div>
+        ))
+       }
           <div  >
-            <h5>Email</h5>
+            <h6>Email</h6>
             <input type="email" {...register("email", {required: true})} placeholder='Email' />
             {errors.email && (<p>Email is required</p> )}
       
-          <h5>Password</h5>
+            <h6>Password</h6>
 
             <input type="password" {...register("password", {required: true})} placeholder='Password' />
             {errors.password && (<p>Password is required</p> )}
@@ -52,12 +53,11 @@ const LogIn = () => {
         <button type='submit'>
           Log In
         </button>
-        <Link to="/register">
-      No tienes una cuenta?
-      Registrate
-        </Link>
+
       </form>
-        
+      <Link to="/register">
+      No tienes una cuenta? Click Aqui!
+        </Link>
       </div>
       
 

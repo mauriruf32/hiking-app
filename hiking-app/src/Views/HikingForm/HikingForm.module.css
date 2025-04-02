@@ -1,126 +1,78 @@
 .formcontainer {
-    /* background-color: aqua;
-    padding: 50px 50px 50px 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    color: rgb(0, 0, 0);
-    justify-content: center; */
-    /* form bg */
-
-
-width: 80%;
-height: 800px;
-flex-direction: row;
-background: #FFFFFF;
-justify-self: center;
-justify-content: center;
+  width: 80%;
+  height: 800px;
+  flex-direction: row;
+  background: #ffffff52;
+  justify-self: center;
+  justify-content: center;
 }
 
 .formbutton {
-/* Buttons */
-/* Auto layout */
-color: #485a68;
-width: 172px;
-height: 56px;
-/* Keatext purple */
-background: #E79645;
-border-radius: 8px;
-justify-self: center;
-/* Inside auto layout */
-margin:  20%;
-
-}
-.formbutton button {
-
   color: #485a68;
-width: 172px;
-height: 56px;
-/* Keatext purple */
-background: #E79645;
-border-radius: 8px;
-justify-self: center;
-  }
+  width: 172px;
+  height: 56px;
+  background: #E79645;
+  border-radius: 8px;
+  justify-self: center;
+  margin:  20%;
+}
 
-/* Dropdown Title */
+.formbutton button {
+  color: #000000;
+  width: 172px;
+  height: 56px;
+  background: #485a68;
+  border-radius: 8px;
+  justify-self: center;
+}
 
+.formbutton button:hover {
+  background-color: #E79645;
+}
 
 .formdropdowns {
-
-/* Dropdowns */
-
-box-sizing: border-box;
-
-position: relative;
-width: 408px;
-height: 254px;
-
-border: 1px dashed #E79645;
-border-radius: 5px;
-
-
+  box-sizing: border-box;
+  position: relative;
+  width: 408px;
+  height: 254px;
+  border: 1px dashed #E79645;
+  border-radius: 5px;
 }
 
-/* Property 1=Dropdown | Regular */
-
-/* Auto layout */
-
 .formdropdown1 {
-
   color: #485a68;
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 6px;
-gap: 10px;
-
-width: 368px;
-height: 40px;
-
-/* W Background */
-background: #FFFFFF;
-/* Keatext purple */
-border: 2px solid #E79645;
-border-radius: 8px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-  
-  }
-
-
-  /* Input field */
-
-/* Auto layout */
-
-
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6px;
+  gap: 10px;
+  width: 368px;
+  height: 40px;
+  background: #ffffff52;
+  border: 2px solid #E79645;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
 
 .inputimg {
-color: #098ff7;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 5px;
-gap: 10px;
-
-width: 368px;
-height: 40px;
-
-/* W Background */
-background: #FFFFFF;
-/* Keatext purple */
-border: 2px solid #E79645;
-border-radius: 8px;
-color: #485a68;
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
+  color: #098ff7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+  gap: 10px;
+  width: 368px;
+  height: 40px;
+  border: 2px solid #E79645;
+  border-radius: 8px;
+  color: #485a68;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 
@@ -135,18 +87,16 @@ h5 {
 
 }
 
-
 .formRow {
   display: flex;
   flex-direction: row;
   justify-self: center;
   }
   
-  .formColumn1 {
-    width: 400px;
-    height: 400px;
+.formColumn1 {
+   width: 400px;
+   height: 400px;
   flex-direction: column;
-  background: #FFFFFF;
   margin-top: 20px;
 
   }
@@ -154,42 +104,26 @@ h5 {
     flex-direction: column;
     width: 400px;
     height: 400px;
-  background: #ffffff;
-  padding: 20px;
+    padding: 20px;
     }
 
 
 .input {
-    /* padding: 5px 0 5px 0;
-    background: rgba(128, 128, 128, 0.548);
-    width: 100%;
-    color: rgb(0, 0, 0);
-    margin: 10px; */
-
-    /* Input field */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 16px;
-gap: 10px;
-
-width: 368px;
-height: 40px;
-
-/* W Background */
-background: #FFFFFF;
-/* Keatext purple */
-border: 2px solid #E79645;
-border-radius: 8px;
-color: #485a68;
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 10px;
+  width: 368px;
+  height: 40px;
+  background: #ffffff52;
+  border: 2px solid #E79645;
+  border-radius: 8px;
+  color: #485a68;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 

@@ -37,26 +37,31 @@
 
 }
 
-/* .form button {
-    height: 30px;
-    width: 35%;
-    text-align: center;
-    border-radius: 10%;
-    color: #000;
-    background-color: aqua;
-} */
+.formColumn2 button {
+  height: 30px;
+  width: 35%;
+  text-align: center;
+  border-radius: 10%;
+  color: #000;
+  background-color: #485a68;
+}
  
+.formColumn2 button:hover {
+  background-color: #E79645;
+}
 
 .inputs {
-    margin: 5px 0 5px ;
+    margin: 0 ;
     
 }
 
 p {
     font-weight: bold;
+    margin: 0 ;
 }
 
 .errors {
     color: red;
+    margin: 0 ;
   }
     
